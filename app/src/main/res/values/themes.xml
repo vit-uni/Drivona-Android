@@ -1,0 +1,40 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.AnalogTelephone" parent="Theme.MaterialComponents.DayNight.NoActionBar.Bridge">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/transparent</item>
+        <item name="colorPrimaryVariant">@color/transparent</item>
+        <item name="colorOnPrimary">@color/transparent</item>
+        <!-- Secondary brand color. -->
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/transparent</item>
+        <!-- Customize your theme here. -->
+        <item name="android:forceDarkAllowed" tools:targetApi="q">true</item>
+    </style>
+    <style name="Theme.AnalogTelephone.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.Yypeiwan.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.Yypeiwan.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="InputBar_Dialog_Style" parent="android:Theme.Dialog">
+        <item name="android:windowBackground">#ffffff</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowFrame">@null</item><!--边框-->
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item><!--半透明-->
+        <item name="android:backgroundDimEnabled">true</item><!--模糊-->
+    </style>
+    <style name="MyDialog" parent="@style/Theme.AppCompat.Dialog">
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+</resources>

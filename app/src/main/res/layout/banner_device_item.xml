@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:background="@drawable/bg_device_main_item"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_add"
+                android:layout_width="58dp"
+                android:layout_height="58dp"
+                android:layout_margin="12dp"
+                android:background="@mipmap/ic_main_add"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imageView"
+                android:layout_width="164dp"
+                android:layout_height="166dp"
+
+                android:layout_marginTop="153dp"
+                android:background="@drawable/selector_device_icon"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toTopOf="@id/tv_device_name"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed"
+                app:shapeAppearance="@style/Round8Style" />
+
+            <ImageView
+                android:id="@+id/iv_pre"
+                android:layout_width="49dp"
+                android:layout_height="49dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/ic_banner_pre_new"
+                app:layout_constraintBottom_toBottomOf="@id/imageView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/imageView" />
+
+            <ImageView
+                android:id="@+id/iv_next"
+                android:layout_width="49dp"
+                android:layout_height="49dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/ic_banner_next_new"
+                app:layout_constraintBottom_toBottomOf="@id/imageView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/imageView" />
+
+            <TextView
+                android:id="@+id/tv_device_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="98dp"
+                android:layout_marginBottom="32dp"
+                android:drawableEnd="@drawable/ic_edit_name"
+                android:drawablePadding="9dp"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="23sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageView" />
+            <ImageView
+                android:id="@+id/iv_delete_new"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_main_delete_icon"
+                app:layout_constraintBottom_toBottomOf="@id/tv_device_name"
+                app:layout_constraintStart_toEndOf="@id/tv_device_name"
+                app:layout_constraintTop_toTopOf="@id/tv_device_name"
+                app:shapeAppearance="@style/Round20Style" />
+
+            <TextView
+                android:id="@+id/tv_device_name_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="23dp"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tv_device_name"
+                app:layout_constraintTop_toBottomOf="@id/tv_device_name" />
+
+            <ImageView
+                android:id="@+id/iv_dian_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/ic_dianliang"
+                app:layout_constraintBottom_toBottomOf="@id/tv_device_name_desc"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_device_name" />
+
+            <ImageView
+                android:id="@+id/iv_dian_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_dianliang_100"
+                app:layout_constraintBottom_toTopOf="@id/tv_dian_desc"
+                app:layout_constraintEnd_toEndOf="@id/iv_dian_bg"
+                app:layout_constraintStart_toStartOf="@id/iv_dian_bg"
+                app:layout_constraintTop_toTopOf="@id/iv_dian_bg"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/tv_dian_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="100%"
+                android:textColor="#00E695"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/iv_dian_bg"
+                app:layout_constraintEnd_toEndOf="@id/iv_dian_bg"
+                app:layout_constraintStart_toStartOf="@id/iv_dian_bg"
+                app:layout_constraintTop_toBottomOf="@id/iv_dian_small" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.hjq.shape.view.ShapeTextView
+            android:id="@+id/tv_reconnect"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="Reconnect"
+            android:textColor="@color/white90"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cl_top"
+            app:shape_solidColor="#003CB3" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_set"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/cl_top">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/iv_notice"
+                android:layout_width="0dp"
+                android:layout_height="74dp"
+                android:layout_marginStart="16dp"
+                android:background="#121317"
+                app:layout_constraintEnd_toStartOf="@id/iv_update"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearance="@style/Round20Style" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_main_notice_icon"
+                app:layout_constraintBottom_toBottomOf="@id/iv_notice"
+                app:layout_constraintEnd_toEndOf="@id/iv_notice"
+                app:layout_constraintStart_toStartOf="@id/iv_notice"
+                app:layout_constraintTop_toTopOf="@id/iv_notice"
+                app:shapeAppearance="@style/Round20Style" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/iv_update"
+                android:layout_width="0dp"
+                android:layout_height="74dp"
+                android:layout_marginStart="11dp"
+                android:background="#121317"
+                app:layout_constraintEnd_toStartOf="@id/iv_light"
+                app:layout_constraintStart_toEndOf="@id/iv_notice"
+                app:layout_constraintTop_toTopOf="@id/iv_notice"
+                app:shapeAppearance="@style/Round20Style" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_main_update_icon"
+                app:layout_constraintBottom_toBottomOf="@id/iv_update"
+                app:layout_constraintEnd_toEndOf="@id/iv_update"
+                app:layout_constraintStart_toStartOf="@id/iv_update"
+                app:layout_constraintTop_toTopOf="@id/iv_update"
+                app:shapeAppearance="@style/Round20Style" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/iv_light"
+                android:layout_width="0dp"
+                android:layout_height="74dp"
+                android:layout_marginStart="11dp"
+                android:background="@drawable/bg_device_is_light"
+                app:layout_constraintEnd_toStartOf="@id/iv_delete"
+                app:layout_constraintStart_toEndOf="@id/iv_update"
+                app:layout_constraintTop_toTopOf="@id/iv_notice"
+                app:shapeAppearance="@style/Round20Style" />
+
+            <ImageView
+                android:id="@+id/iv_light_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_main_light_icon"
+                app:layout_constraintBottom_toBottomOf="@id/iv_light"
+                app:layout_constraintEnd_toEndOf="@id/iv_light"
+                app:layout_constraintStart_toStartOf="@id/iv_light"
+                app:layout_constraintTop_toTopOf="@id/iv_light"
+                app:shapeAppearance="@style/Round20Style" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/iv_delete"
+                android:layout_width="0dp"
+                android:layout_height="74dp"
+                android:layout_marginStart="11dp"
+                android:layout_marginEnd="16dp"
+                android:background="#121317"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/iv_light"
+                app:layout_constraintTop_toTopOf="@id/iv_notice"
+                app:shapeAppearance="@style/Round20Style" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_main_delete_icon"
+                app:layout_constraintBottom_toBottomOf="@id/iv_delete"
+                app:layout_constraintEnd_toEndOf="@id/iv_delete"
+                app:layout_constraintStart_toStartOf="@id/iv_delete"
+                app:layout_constraintTop_toTopOf="@id/iv_delete"
+                app:shapeAppearance="@style/Round20Style" />
+
+            <com.hjq.shape.layout.ShapeConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:paddingBottom="11dp"
+                app:layout_constraintTop_toBottomOf="@id/iv_notice"
+                app:shape_solidColor="#121317">
+
+
+                <com.hjq.shape.layout.ShapeConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="17dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="30dp"
+                    android:paddingHorizontal="9dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:shape_radius="20dp"
+                    app:shape_solidColor="#0DD1E2FF">
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cl_device_02"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/tv_set_0"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="25dp"
+                            android:text="Screen Brightness"
+                            android:textColor="@color/white"
+                            android:textSize="15sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tv_set_0_desc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:text="Set display brightness"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tv_set_0" />
+
+                        <SeekBar
+                            android:id="@+id/seekbar_0"
+                            android:layout_width="0dp"
+                            android:layout_height="42dp"
+                            android:layout_marginTop="14dp"
+                            android:max="4"
+                            android:maxHeight="42dp"
+                            android:minHeight="42dp"
+                            android:paddingStart="0dp"
+                            android:paddingEnd="0dp"
+                            android:progress="5"
+                            android:progressDrawable="@drawable/seekbarbackground"
+                            android:splitTrack="false"
+                            android:thumb="@drawable/ic_seek_thumb_new"
+                            android:thumbOffset="0dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tv_set_0_desc" />
+
+                        <TextView
+                            android:id="@+id/tv_seekbar_0"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingHorizontal="10dp"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@id/seekbar_0"
+                            app:layout_constraintEnd_toEndOf="@id/seekbar_0"
+                            app:layout_constraintTop_toTopOf="@id/seekbar_0" />
+
+                        <TextView
+                            android:id="@+id/tv_set_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="18dp"
+                            android:text="Warning Light Brightness "
+                            android:textColor="@color/white"
+                            android:textSize="15sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/seekbar_0" />
+
+                        <TextView
+                            android:id="@+id/tv_set_1_desc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:text="Adjust alarm light intensity"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tv_set_1" />
+
+                        <SeekBar
+                            android:id="@+id/seekbar_1"
+                            android:layout_width="0dp"
+                            android:layout_height="42dp"
+                            android:layout_marginTop="14dp"
+                            android:max="4"
+                            android:maxHeight="42dp"
+                            android:minHeight="42dp"
+                            android:paddingStart="0dp"
+                            android:paddingEnd="0dp"
+                            android:progress="5"
+                            android:progressDrawable="@drawable/seekbarbackground"
+                            android:thumb="@drawable/ic_seek_thumb_new"
+                            android:thumbOffset="0dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tv_set_1_desc" />
+
+                        <TextView
+                            android:id="@+id/tv_seekbar_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingHorizontal="10dp"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@id/seekbar_1"
+                            app:layout_constraintEnd_toEndOf="@id/seekbar_1"
+                            app:layout_constraintTop_toTopOf="@id/seekbar_1" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cl_device_01"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/cl_device_02">
+
+                        <TextView
+                            android:id="@+id/tv_set_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="25dp"
+                            android:text="Alarm Volume"
+                            android:textColor="@color/white"
+                            android:textSize="15sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tv_set_2_desc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:text="Control warning sound volume"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tv_set_2" />
+
+                        <SeekBar
+                            android:id="@+id/seekbar_2"
+                            android:layout_width="0dp"
+                            android:layout_height="42dp"
+                            android:layout_marginTop="14dp"
+                            android:max="10"
+                            android:maxHeight="42dp"
+                            android:minHeight="42dp"
+                            android:paddingStart="0dp"
+                            android:paddingEnd="0dp"
+                            android:progress="5"
+                            android:progressDrawable="@drawable/seekbarbackground"
+                            android:thumb="@drawable/ic_seek_thumb_new"
+                            android:thumbOffset="0dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tv_set_2_desc" />
+
+                        <TextView
+                            android:id="@+id/tv_seekbar_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingHorizontal="10dp"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@id/seekbar_2"
+                            app:layout_constraintEnd_toEndOf="@id/seekbar_2"
+                            app:layout_constraintTop_toTopOf="@id/seekbar_2" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.hjq.shape.layout.ShapeConstraintLayout>
+            </com.hjq.shape.layout.ShapeConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

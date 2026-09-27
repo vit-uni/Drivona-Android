@@ -1,0 +1,66 @@
+static def addCommonMaven(RepositoryHandler handler) {
+    // 阿里云云效仓库：https://maven.aliyun.com/mvn/guide
+    handler.maven { url 'https://maven.aliyun.com/repository/public' }
+    handler.maven { url 'https://maven.aliyun.com/repository/google' }
+    // 华为开源镜像：https://mirrors.huaweicloud.com
+    handler.maven { url 'https://repo.huaweicloud.com/repository/maven' }
+    // JitPack 远程仓库：https://jitpack.io
+    handler.maven { url 'https://jitpack.io' }
+    handler.maven {
+        url = uri("https://storage.googleapis.com/r8-releases/raw")
+    }
+    // MavenCentral 远程仓库：https://mvnrepository.com
+    handler.mavenCentral()
+    handler.google()
+    // noinspection JcenterRepositoryObsolete
+    handler.jcenter()
+}
+
+ext.addCommonMaven = this.&addCommonMaven
+
+ext {
+    //开发配置
+    buildToolsVersion = '30.0.2'
+    compileSdk = 35
+    minSdk = 21
+    targetSdk = 31
+    //动态配置
+    versionCode = 1
+    versionName = "1.0.0"
+    // 第三方库
+    okhttp = "4.9.3"
+    gson = "2.8.6"
+    arouter = "1.5.2"
+    easypermissions = "3.0.0"
+    glide = "4.13.0"
+    glideTrans = "4.3.0"
+    indicatorView = "2.1.3"
+    rxjava = "3.0.2"
+    rxandroid = "3.0.0"
+    rxbinding = "4.0.0"
+    roundimageview = "2.3.0"
+    baseAdapter = "3.0.7"
+    emojiIos = "0.8.0"
+    emojiJava = "5.1.1"
+    smartRefresh = "2.0.5"
+    floatWindow = "1.0.9"
+    pictureselector = "v3.0.9"
+    lottieVersion = "5.2.0"
+
+    // 友盟 AppKey
+    UMENG_APP_KEY = "646c850fba6a5259c45753ed"
+    // QQ AppId
+    QQ_APP_ID = "102040217"
+    // QQ Secret-
+    QQ_APP_SECRET = "vjU2OVO2VjiSIuHO"
+    // 微信 AppId
+    WX_APP_ID = "wxb62795e498c847d1"
+    // 微信 Secret
+    WX_APP_SECRET = "bcea00c921d27948e385a18e54ab397f"
+
+    mode = 0
+    android_ui = [
+            appcompat: "androidx.appcompat:appcompat:1.3.1",
+            material : "com.google.android.material:material:1.4.0",
+    ]
+}

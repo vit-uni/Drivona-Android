@@ -1,0 +1,33 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 36
+    namespace "com.eightbitlab.blurview"
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    defaultConfig {
+        minSdkVersion 18
+        targetSdkVersion 36
+        testInstrumentationRunner "de.mannodermaus.junit5.AndroidJUnit5Builder"
+    }
+
+    testOptions {
+     
+    }
+}
+
+configurations {
+    javadocDeps
+}
+
+dependencies {
+    implementation 'androidx.annotation:annotation:1.9.1'
+    javadocDeps 'androidx.annotation:annotation:1.9.1'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.11.4'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher:1.11.4'
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.hjq.shape.layout.ShapeConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cl_email"
+    android:layout_width="183dp"
+    android:layout_height="183dp"
+    app:shape_radius="28dp"
+    app:shape_solidColor="#CC000000">
+
+    <TextView
+        android:id="@+id/tv_0"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:drawableTop="@drawable/ic_email"
+        android:drawablePadding="28dp"
+        android:gravity="center"
+        android:text="@string/invalid_email_address"
+        android:textColor="@color/white90"
+        android:textSize="21sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</com.hjq.shape.layout.ShapeConstraintLayout>

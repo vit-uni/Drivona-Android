@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.hjq.shape.layout.ShapeConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cl_location_detail"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="50dp"
+    app:shape_solidColor="#030C17"
+    app:shape_topLeftRadius="13dp"
+    app:shape_topRightRadius="13dp">
+
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="17dp"
+        android:src="@drawable/ic_dialog_close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_location_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="37dp"
+        android:text="@string/save_this_location_as"
+        android:textColor="@color/white"
+        android:textSize="21sp"
+        app:layout_constraintEnd_toStartOf="@id/iv_close"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_location_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:text="@string/add_a_label_for_quick_access"
+        android:textColor="#FFFFFF"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toStartOf="@id/iv_add"
+        app:layout_constraintStart_toStartOf="@id/tv_location_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_location_name" />
+
+
+    <com.hjq.shape.layout.ShapeConstraintLayout
+        android:id="@+id/cl_favorite"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+
+        android:paddingHorizontal="9dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="13dp"
+        app:layout_constraintEnd_toStartOf="@id/cl_home"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/cl_home"
+        app:shape_radius="13dp"
+        app:shape_solidColor="#1AFFFFFF">
+
+        <TextView
+            android:id="@+id/tv_favorite"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/ic_favorite"
+            android:drawablePadding="9dp"
+            android:gravity="center"
+            android:text="@string/favorites"
+            android:textColor="#ffffff"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </com.hjq.shape.layout.ShapeConstraintLayout>
+
+    <com.hjq.shape.layout.ShapeConstraintLayout
+        android:id="@+id/cl_home"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="50dp"
+        android:paddingHorizontal="9dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="13dp"
+        app:layout_constraintEnd_toStartOf="@id/cl_company"
+        app:layout_constraintStart_toEndOf="@id/cl_favorite"
+        app:layout_constraintTop_toBottomOf="@id/tv_location_desc"
+        app:shape_radius="13dp"
+        app:shape_solidColor="#1AFFFFFF">
+
+        <TextView
+            android:id="@+id/tv_home"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/ic_home"
+            android:drawablePadding="9dp"
+            android:gravity="center"
+            android:text="@string/home"
+            android:textColor="#ffffff"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </com.hjq.shape.layout.ShapeConstraintLayout>
+
+    <com.hjq.shape.layout.ShapeConstraintLayout
+        android:id="@+id/cl_company"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:layout_marginEnd="17dp"
+        android:paddingHorizontal="9dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="13dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/cl_home"
+        app:layout_constraintTop_toTopOf="@id/cl_home"
+        app:shape_radius="13dp"
+        app:shape_solidColor="#1AFFFFFF">
+
+        <TextView
+            android:id="@+id/tv_company"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/ic_company"
+            android:drawablePadding="9dp"
+            android:gravity="center"
+            android:text="@string/work"
+            android:textColor="#ffffff"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </com.hjq.shape.layout.ShapeConstraintLayout>
+
+
+</com.hjq.shape.layout.ShapeConstraintLayout>

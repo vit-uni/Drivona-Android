@@ -1,0 +1,26 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdk rootProject.ext.compileSdk
+    namespace "com.ypx.imagepicker"
+    defaultConfig {
+        minSdk rootProject.ext.minSdk
+        targetSdk rootProject.ext.targetSdk
+        buildConfigField "String", "APPLICATION_ID", '"milipaidui.milipaidui.app"'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_18
+        targetCompatibility JavaVersion.VERSION_18
+    }
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation android_ui.appcompat
+    implementation android_ui.material
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    compileOnly project(':Library:permission')
+    compileOnly "com.blankj:utilcode:1.30.7"
+}

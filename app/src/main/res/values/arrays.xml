@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string-array name="tabOne">
+        <item>@mipmap/tab_one</item>
+        <item>@mipmap/tab_one1</item>
+        <item>@mipmap/tab_one1</item>
+        <item>@mipmap/tab_one1</item>
+    </string-array>
+    <string-array name="tabTwo">
+        <item>@mipmap/tab_two1</item>
+        <item>@mipmap/tab_two</item>
+        <item>@mipmap/tab_two</item>
+        <item>@mipmap/tab_two</item>
+    </string-array>
+    <string-array name="tabThree">
+<!--        <item>@mipmap/tab_three1</item>-->
+<!--        <item>@mipmap/tab_three</item>-->
+<!--        <item>@mipmap/tab_three</item>-->
+<!--        <item>@mipmap/tab_three</item>-->
+    </string-array>
+    <string-array name="tabFour">
+<!--        <item>@mipmap/tab_four1</item>-->
+<!--        <item>@mipmap/tab_four</item>-->
+<!--        <item>@mipmap/tab_four</item>-->
+<!--        <item>@mipmap/tab_four</item>-->
+    </string-array>
+
+    <!--个人中心-->
+    <string-array name="center_feature">
+        <item>我的钱包</item>
+        <item>优惠券</item>
+        <item>我的订单</item>
+        <item>房间管理</item>
+        <item>道具商城</item>
+        <item>声音鉴定</item>
+        <item>我的等级</item>
+        <item>技能管理</item>
+        <item>公会入驻</item>
+        <item>公会管理</item>
+        <item>加入公会</item>
+        <item>我的公会</item>
+    </string-array>
+
+    <string-array name="center_feature_icon">
+<!--        <item>@mipmap/purse</item>-->
+<!--        <item>@mipmap/coupons</item>-->
+<!--        <item>@mipmap/my_orders</item>-->
+<!--        <item>@drawable/blue_shield</item>-->
+<!--        <item>@mipmap/shop</item>-->
+<!--        <item>@drawable/ic_mine_voice</item>-->
+<!--        <item>@drawable/level</item>-->
+<!--        <item>@drawable/ic_mine_kill_kill</item>-->
+<!--        <item>@drawable/guild_settles_in</item>-->
+<!--        <item>@drawable/manage_guild</item>-->
+<!--        <item>@drawable/join_guild</item>-->
+<!--        <item>@drawable/my_guild</item>-->
+    </string-array>
+
+    <!--房间设置-->
+    <string-array name="room_type">
+        <item>语音房间</item>
+        <item>开黑房间</item>
+    </string-array>
+
+    <!--房间设置-->
+    <string-array name="room_setting">
+        <item>房间特效</item>
+        <item>取消静音</item>
+        <item>举报</item>
+        <item>管理员</item>
+        <item>公屏管理</item>
+    </string-array>
+
+    <string-array name="room_setting_icon">
+<!--        <item>@mipmap/ic_special_effect</item>-->
+<!--        <item>@mipmap/ic_mute</item>-->
+<!--        <item>@mipmap/ic_square_report</item>-->
+<!--        <item>@drawable/ic_administrator</item>-->
+<!--        <item>@drawable/ic_public_screen_management</item>-->
+    </string-array>
+
+    <string-array name="room_gift_num">
+        <item>1</item>
+        <item>5</item>
+        <item>10</item>
+        <item>21</item>
+        <item>30</item>
+        <item>66</item>
+        <item>99</item>
+        <item>188</item>
+        <item>520</item>
+        <item>1314</item>
+    </string-array>
+
+    <string-array name="room_lucky_num">
+        <item>5</item>
+        <item>10</item>
+        <item>21</item>
+        <item>30</item>
+        <item>66</item>
+        <item>99</item>
+    </string-array>
+
+    <string-array name="room_gift_num_name">
+        <item>一心一意</item>
+        <item>五福临门</item>
+        <item>十全十美</item>
+        <item>爱你</item>
+        <item>想你</item>
+        <item>一切顺利</item>
+        <item>长长久久</item>
+        <item>要抱抱</item>
+        <item>我爱你</item>
+        <item>一生一世</item>
+    </string-array>
+
+    <!--特效设置-->
+    <string-array name="special_effect_setting">
+<!--        <item>屏蔽所有特效</item>-->
+        <item>屏蔽礼物特效</item>
+        <item>屏蔽礼物横幅</item>
+        <item>屏蔽入场特效</item>
+        <item>屏蔽房间弹幕</item>
+        <item>屏蔽全频广播</item>
+<!--        <item>屏蔽动态背景</item>-->
+<!--        <item>屏蔽升级广播</item>-->
+    </string-array>
+
+
+    <string-array name="labels">
+        <item>可爱</item>
+        <item>御姐</item>
+        <item>霸道</item>
+        <item>热情</item>
+        <item>可爱</item>
+        <item>御姐</item>
+        <item>霸道</item>
+        <item>热情</item>
+        <item>可爱</item>
+        <item>可爱</item>
+        <item>可爱</item>
+        <item>可爱</item>
+        <item>可爱</item>
+        <item>可爱</item>
+        <item>可爱</item>
+    </string-array>
+</resources>

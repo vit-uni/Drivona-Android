@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_splash">
+
+
+    <com.google.android.libraries.navigation.NavigationView
+        android:id="@+id/navView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="-10dp"
+        app:layout_constraintBottom_toTopOf="@id/nav_info_bottom"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/nav_info_frame"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleBar" />
+
+    <com.drivona.speed.widght.StatusBarView
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:sbv_single_state="true" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@id/tv_location_state"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_exit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_map_exit"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_goneMarginBottom="162dp" />
+
+        <ImageView
+            android:id="@+id/iv_device"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/selector_map_device"
+            app:layout_constraintBottom_toTopOf="@id/iv_exit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_goneMarginBottom="162dp" />
+
+        <ImageView
+            android:id="@+id/iv_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/selector_map_location"
+            app:layout_constraintBottom_toTopOf="@id/iv_device"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/iv_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/selector_map_camera"
+            app:layout_constraintBottom_toTopOf="@id/iv_location"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <com.hjq.shape.view.ShapeTextView
+        android:id="@+id/tv_device_state"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="17dp"
+        android:layout_marginBottom="10dp"
+        android:drawableStart="@drawable/ic_map_device_notice"
+        android:drawableEnd="@drawable/ic_map_device_connect"
+        android:drawablePadding="11dp"
+        android:gravity="center_vertical"
+        android:paddingVertical="12dp"
+        android:paddingStart="25dp"
+        android:paddingEnd="18dp"
+        android:text="@string/device_disconnected_ncheck_the_connection"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/nav_info_bottom"
+        app:shape_radius="13dp"
+        app:shape_solidColor="#390909">
+
+    </com.hjq.shape.view.ShapeTextView>
+
+    <com.hjq.shape.view.ShapeTextView
+        android:id="@+id/tv_location_state"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="17dp"
+        android:layout_marginBottom="10dp"
+        android:drawableStart="@drawable/ic_map_location_permission"
+        android:drawableEnd="@drawable/ic_map_location_go"
+        android:drawablePadding="11dp"
+        android:gravity="center_vertical"
+        android:paddingVertical="12dp"
+        android:paddingStart="25dp"
+        android:paddingEnd="18dp"
+        android:text="@string/set_location_access_to_always_allow"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/tv_device_state"
+        app:shape_radius="13dp"
+        app:shape_solidColor="#390909">
+
+    </com.hjq.shape.view.ShapeTextView>
+
+
+    <FrameLayout
+        android:id="@+id/nav_info_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

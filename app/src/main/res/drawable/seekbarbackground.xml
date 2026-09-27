@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 第一层背景图，即seekbar的背景 -->
+    <item
+        android:id="@android:id/background"
+       >
+        <shape android:shape="rectangle">
+            <corners android:radius="12dp" />
+            <solid android:color="#000000" />
+        </shape>
+    </item>
+
+
+    <!--第三层图背景，即真正的进度条的背景。注意：一定要设置clip标签-->
+    <item
+        android:id="@android:id/progress"
+      >
+        <clip>
+            <shape android:shape="rectangle">
+                <corners android:radius="12dp" />
+                <gradient
+                    android:endColor="#174196"
+                    android:startColor="#0000246B" />
+            </shape>
+        </clip>
+    </item>
+</layer-list>

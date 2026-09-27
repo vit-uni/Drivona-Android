@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingBottom="12dp">
+
+    <ImageView
+        android:id="@+id/voice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <EditText
+        android:id="@+id/etMessage"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="10dp"
+        android:inputType="textCapSentences|textMultiLine"
+        android:maxLines="3"
+        android:minHeight="30dp"
+        android:paddingHorizontal="5dp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/basis_17sp"
+        app:layout_constraintEnd_toStartOf="@+id/send"
+        app:layout_constraintStart_toEndOf="@+id/voice"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/send"
+        android:layout_width="70dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/bg_login"
+        android:gravity="center"
+        android:text="发送"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/etMessage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/etMessage" />
+
+    <TextView
+        android:id="@+id/speak"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="按住说话"
+        android:textColor="@color/black85"
+        android:textSize="14sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/send"
+        app:layout_constraintStart_toEndOf="@+id/voice"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/ll_bot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/etMessage">
+
+        <ImageView
+            android:id="@+id/changeInput"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/pick"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/chooseIm"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/emoji"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/gift"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_weight="1" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/emojiList"
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/ll_bot" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/giftCo"
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:background="@color/white"
+        android:paddingBottom="10dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/ll_bot">
+
+        <com.flyco.tablayout.SlidingTabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="80dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tl_indicator_color="@color/fs"
+            app:tl_indicator_corner_radius="3dp"
+            app:tl_indicator_height="3dp"
+            app:tl_indicator_width="14sp"
+            app:tl_tab_space_equal="true"
+            app:tl_textBold="SELECT"
+            android:visibility="gone"
+            app:tl_textSelectColor="@color/black"
+            app:tl_textUnselectColor="@color/grey_tip"
+            app:tl_textsize="@dimen/size14" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            app:layout_constraintBottom_toTopOf="@id/money"
+            app:layout_constraintTop_toBottomOf="@id/tab_layout" />
+
+        <TextView
+            android:id="@+id/money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="5dp"
+            android:padding="8dp"
+            android:text="0"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/myMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="充值"
+            android:textColor="#eb45b7"
+            android:textSize="14sp"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@+id/money"
+            app:layout_constraintTop_toTopOf="@id/money" />
+
+        <ImageView
+            android:id="@+id/vv"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@id/llNum"
+            app:layout_constraintEnd_toEndOf="@id/llNum"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_weight="1" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/llNum"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@id/bg"
+            app:layout_constraintEnd_toEndOf="@id/bg"
+            app:layout_constraintStart_toStartOf="@id/bg"
+            app:layout_constraintTop_toBottomOf="@+id/vv">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/giftNumList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp" />
+
+            <TextView
+                android:id="@+id/etGiftNum"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/bg_input"
+                android:gravity="center"
+                android:text="自定义数量"
+                android:textColor="@color/grey_tip"
+                android:textSize="10dp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <ImageView
+            android:id="@+id/bg"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="15dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/etNum"
+            android:layout_width="50dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:inputType="numberSigned"
+            android:text="1"
+            android:textColor="@color/fs"
+            android:textSize="14sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/bg"
+            app:layout_constraintEnd_toStartOf="@+id/btnBuy"
+            app:layout_constraintStart_toStartOf="@+id/bg"
+            app:layout_constraintTop_toTopOf="@+id/bg" />
+
+        <TextView
+            android:id="@+id/btnBuy"
+            android:layout_width="50dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text="赠送"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/bg"
+            app:layout_constraintEnd_toEndOf="@+id/bg"
+            app:layout_constraintTop_toTopOf="@+id/bg" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

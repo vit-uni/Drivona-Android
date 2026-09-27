@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.hjq.shape.layout.ShapeConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/pop_device_set"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="20dp"
+    app:shape_solidColor="#030C17"
+    app:shape_topLeftRadius="10dp"
+    app:shape_topRightRadius="10dp">
+
+    <TextView
+        android:id="@+id/tv_device_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="20dp"
+        android:drawablePadding="9dp"
+        android:singleLine="true"
+        android:text="1111111"
+
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toStartOf="@id/iv_notice"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_device_name_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="111"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@id/tv_device_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_device_name" />
+
+    <com.hjq.shape.view.ShapeTextView
+        android:id="@+id/tv_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="4dp"
+        android:text="@string/connected"
+        android:textColor="@color/white"
+        android:textSize="11sp"
+        app:layout_constraintStart_toStartOf="@id/tv_device_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_device_name_desc"
+        app:shape_radius="7dp"
+        app:shape_solidColor="#00E695" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_light"
+        android:layout_width="88dp"
+        android:layout_height="88dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="22dp"
+        android:background="@drawable/bg_device_is_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearance="@style/Round20Style" />
+
+    <ImageView
+        android:id="@+id/iv_light_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_main_light_icon"
+        app:layout_constraintBottom_toBottomOf="@id/iv_light"
+        app:layout_constraintEnd_toEndOf="@id/iv_light"
+        app:layout_constraintStart_toStartOf="@id/iv_light"
+        app:layout_constraintTop_toTopOf="@id/iv_light"
+        app:shapeAppearance="@style/Round20Style" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_notice"
+        android:layout_width="88dp"
+        android:layout_height="88dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:background="#121317"
+        app:layout_constraintEnd_toStartOf="@id/iv_light"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearance="@style/Round20Style" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_main_notice_icon"
+        app:layout_constraintBottom_toBottomOf="@id/iv_notice"
+        app:layout_constraintEnd_toEndOf="@id/iv_notice"
+        app:layout_constraintStart_toStartOf="@id/iv_notice"
+        app:layout_constraintTop_toTopOf="@id/iv_notice"
+        app:shapeAppearance="@style/Round20Style" />
+
+    <com.hjq.shape.layout.ShapeConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="17dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_state">
+
+        <com.hjq.shape.layout.ShapeConstraintLayout
+            android:id="@+id/cl_device_02"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="10dp"
+            android:paddingBottom="10dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shape_radius="24dp"
+            app:shape_solidColor="#0E1926">
+
+            <TextView
+                android:id="@+id/tv_set_0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="@string/screen_brightness"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_set_0_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="@string/adjust_display_brightness"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_set_0" />
+
+            <SeekBar
+                android:id="@+id/seekbar_0"
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:layout_marginTop="14dp"
+                android:max="4"
+                android:maxHeight="42dp"
+                android:minHeight="42dp"
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp"
+                android:progress="5"
+                android:progressDrawable="@drawable/seekbarbackground"
+                android:splitTrack="false"
+                android:thumb="@drawable/ic_seek_thumb_new"
+                android:thumbOffset="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_set_0_desc" />
+
+            <TextView
+                android:id="@+id/tv_seekbar_0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="10dp"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/seekbar_0"
+                app:layout_constraintEnd_toEndOf="@id/seekbar_0"
+                app:layout_constraintTop_toTopOf="@id/seekbar_0" />
+
+            <TextView
+                android:id="@+id/tv_set_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="@string/warning_light_brightness"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/seekbar_0" />
+
+            <TextView
+                android:id="@+id/tv_set_1_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="@string/adjust_warning_light_brightness"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_set_1" />
+
+            <SeekBar
+                android:id="@+id/seekbar_1"
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:layout_marginTop="14dp"
+                android:max="4"
+                android:maxHeight="42dp"
+                android:minHeight="42dp"
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp"
+                android:progress="5"
+                android:progressDrawable="@drawable/seekbarbackground"
+                android:thumb="@drawable/ic_seek_thumb_new"
+                android:thumbOffset="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_set_1_desc" />
+            <TextView
+                android:id="@+id/tv_seekbar_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="10dp"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/seekbar_1"
+                app:layout_constraintEnd_toEndOf="@id/seekbar_1"
+                app:layout_constraintTop_toTopOf="@id/seekbar_1" />
+        </com.hjq.shape.layout.ShapeConstraintLayout>
+
+        <com.hjq.shape.layout.ShapeConstraintLayout
+            android:id="@+id/cl_device_01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingHorizontal="10dp"
+            android:paddingBottom="10dp"
+            app:layout_constraintTop_toBottomOf="@id/cl_device_02"
+            app:shape_radius="24dp"
+            app:shape_solidColor="#0E1926">
+
+            <TextView
+                android:id="@+id/tv_set_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="@string/alert_volume"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_set_2_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="@string/adjust_alert_volume"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_set_2" />
+
+            <SeekBar
+                android:id="@+id/seekbar_2"
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:layout_marginTop="14dp"
+                android:max="10"
+                android:maxHeight="42dp"
+                android:minHeight="42dp"
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp"
+                android:progress="5"
+                android:progressDrawable="@drawable/seekbarbackground"
+                android:thumb="@drawable/ic_seek_thumb_new"
+                android:thumbOffset="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_set_2_desc" />
+            <TextView
+                android:id="@+id/tv_seekbar_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="10dp"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/seekbar_2"
+                app:layout_constraintEnd_toEndOf="@id/seekbar_2"
+                app:layout_constraintTop_toTopOf="@id/seekbar_2" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:id="@+id/cl_01"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/seekbar_2"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_set_11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:text="@string/warning_light_brightness"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/tv_set_11_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="@string/adjust_warning_light_brightness"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_set_11" />
+
+                <SeekBar
+                    android:id="@+id/seekbar_11"
+                    android:layout_width="0dp"
+                    android:layout_height="42dp"
+                    android:layout_marginTop="14dp"
+                    android:max="4"
+                    android:maxHeight="42dp"
+                    android:minHeight="42dp"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="0dp"
+                    android:progress="5"
+                    android:progressDrawable="@drawable/seekbarbackground"
+                    android:thumb="@drawable/ic_seek_thumb_new"
+                    android:thumbOffset="0dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_set_11_desc" />
+                <TextView
+                    android:id="@+id/tv_seekbar_11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="10dp"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/seekbar_11"
+                    app:layout_constraintEnd_toEndOf="@id/seekbar_11"
+                    app:layout_constraintTop_toTopOf="@id/seekbar_11" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.hjq.shape.layout.ShapeConstraintLayout>
+    </com.hjq.shape.layout.ShapeConstraintLayout>
+</com.hjq.shape.layout.ShapeConstraintLayout>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black" >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_splash_bg" />
+
+    <com.drivona.speed.widght.StatusBarView
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:sbv_single_state="true" />
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:src="@mipmap/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_bar" />
+
+    <TextView
+        android:id="@+id/t1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="123dp"
+        android:text="Change email"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="11dp"
+        android:text="We have sent the verification code to your mailbox, please check the verification code in the inbox and enter it in the input box"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/t1" />
+
+    <TextView
+        android:id="@+id/tv_error_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:gravity="center"
+        android:text="@string/incorrect_verification_code"
+        android:textColor="#E6FF5757"
+        android:textSize="16sp"
+        android:layout_marginTop="40dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_desc" />
+
+    <com.drivona.speed.widght.RoomEncryptionInputView
+        android:id="@+id/et_code"
+        android:layout_width="0dp"
+        android:layout_height="72dp"
+        android:layout_centerInParent="true"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="10dp"
+        android:inputType="number"
+        android:textCursorDrawable="@color/transparent"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_error_desc"
+        app:ui_widget_backColor="#4d000000"
+        app:ui_widget_checkedColor="#4d000000"
+        app:ui_widget_defaultColor="@color/transparent"
+        app:ui_widget_isPwd="false"
+        app:ui_widget_isWaitInput="true"
+        app:ui_widget_round="8dp"
+        app:ui_widget_textColor="@color/white"
+        app:ui_widget_textLength="4"
+        app:ui_widget_textSize="18sp"
+        app:ui_widget_waitInputColor="#4E5969" />
+
+    <TextView
+        android:id="@+id/tv_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="@string/incorrect_verification_code"
+        android:textColor="#ffff5757"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/et_code"
+        app:layout_constraintEnd_toEndOf="@id/et_code" />
+
+
+    <com.drivona.speed.widght.CountdownView
+        android:id="@+id/tv_code_desc"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="36dp"
+        android:gravity="center"
+        android:text="Re-send the verification code"
+        android:textColor="#E6FFFFFF"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:background="@drawable/bg_white_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_code"
+        />
+
+    <TextView
+        android:id="@+id/next"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="23dp"
+        android:background="@drawable/selector_login_btn"
+        android:gravity="center"
+        android:text="Next"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/tv_code_desc" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

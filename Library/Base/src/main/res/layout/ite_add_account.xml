@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入您的真实姓名"
+        android:textColor="#ff666666"
+        android:textSize="13sp"
+        android:layout_marginHorizontal="44dp"
+        android:layout_marginTop="31dp"
+        android:paddingVertical="8dp"
+        android:gravity="center_horizontal"
+        android:background="@drawable/shape_d1d1d1_360radius" />
+
+    <EditText
+        android:id="@+id/ali_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入您的支付宝账号"
+        android:textColor="#ff666666"
+        android:textSize="13sp"
+        android:layout_marginHorizontal="44dp"
+        android:layout_marginTop="20dp"
+        android:paddingVertical="8dp"
+        android:gravity="center_horizontal"
+        android:background="@drawable/shape_d1d1d1_360radius" />
+
+    <TextView
+        android:id="@+id/next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="确定"
+        android:textColor="#ffffffff"
+        android:textSize="13sp"
+        android:paddingVertical="8dp"
+        android:gravity="center_horizontal"
+        android:background="@drawable/shape_4acfff_360radius"
+        android:layout_marginHorizontal="44dp"
+        android:layout_marginBottom="18dp"
+        app:layout_constraintVertical_bias="1"
+        android:layout_marginTop="60dp"/>
+</LinearLayout>

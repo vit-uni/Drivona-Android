@@ -1,0 +1,912 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/pop_device_notice"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="50dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_notice_0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_top_0"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="17dp"
+
+            android:background="@drawable/selector_notice_top"
+            android:paddingHorizontal="9dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="13dp"
+            app:layout_constraintEnd_toStartOf="@id/cl_top_1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/cl_top_1">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/ic_notice_top_0"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.hjq.shape.layout.ShapeConstraintLayout
+            android:id="@+id/cl_top_1"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="22dp"
+            android:background="@drawable/selector_notice_top"
+            android:paddingHorizontal="9dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="13dp"
+            app:layout_constraintEnd_toStartOf="@id/cl_top_2"
+            app:layout_constraintStart_toEndOf="@id/cl_top_0"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/ic_notice_top_1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </com.hjq.shape.layout.ShapeConstraintLayout>
+
+        <com.hjq.shape.layout.ShapeConstraintLayout
+            android:id="@+id/cl_top_2"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginEnd="17dp"
+            android:background="@drawable/selector_notice_top"
+            android:paddingHorizontal="9dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="13dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/cl_top_1"
+            app:layout_constraintTop_toTopOf="@id/cl_top_1">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/ic_notice_top_2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </com.hjq.shape.layout.ShapeConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_notice_0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_top_bg"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="-50dp"
+                android:layout_marginTop="-50dp"
+                android:layout_marginEnd="-50dp"
+                android:background="@mipmap/ic_notice_bg_0"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_device"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/ic_notice_device_icon_0"
+                app:layout_constraintBottom_toBottomOf="@id/iv_top_bg"
+                app:layout_constraintEnd_toEndOf="@id/iv_top_bg"
+                app:layout_constraintStart_toStartOf="@id/iv_top_bg"
+                app:layout_constraintTop_toTopOf="@id/iv_top_bg" />
+
+            <TextView
+                android:id="@+id/tv_0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="71dp"
+                android:text="@string/speed_limit_alert_settings"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_device" />
+
+            <TextView
+                android:id="@+id/tv_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="18dp"
+                android:layout_marginTop="6dp"
+                android:text="@string/choose_how_drivona_warns_you"
+                android:textColor="#E6FFFFFF"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_0" />
+
+
+            <TextView
+                android:id="@+id/tv_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="18dp"
+                android:layout_marginTop="26dp"
+                android:text="@string/enable_alerts"
+                android:textColor="#E6FFFFFF"
+                android:textSize="21sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_1" />
+
+            <com.hjq.shape.layout.ShapeConstraintLayout
+                android:id="@+id/cl_0"
+                android:layout_width="0dp"
+                android:layout_height="111dp"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toStartOf="@id/cl_1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_2"
+                app:shape_radius="13dp"
+                app:shape_solidColor="#4D000000">
+
+                <ImageView
+                    android:id="@+id/iv_device_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="14dp"
+                    android:background="@mipmap/ic_notice_device_small_icon"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:text="@string/alert_on_ndevice"
+                    android:textColor="#E6FFFFFF"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_device_icon"
+                    app:layout_constraintStart_toEndOf="@id/iv_device_icon"
+                    app:layout_constraintTop_toTopOf="@id/iv_device_icon" />
+
+                <com.hjq.widget.view.SwitchButton
+                    android:id="@+id/sw_speed_alarm_device"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="9dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <ImageView
+                    android:id="@+id/speed_test_device"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_alarm_test"
+                    app:layout_constraintBottom_toBottomOf="@id/sw_speed_alarm_device"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/sw_speed_alarm_device" />
+            </com.hjq.shape.layout.ShapeConstraintLayout>
+
+            <com.hjq.shape.layout.ShapeConstraintLayout
+                android:id="@+id/cl_1"
+                android:layout_width="0dp"
+                android:layout_height="111dp"
+                android:layout_marginStart="9dp"
+                android:layout_marginEnd="17dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/cl_0"
+                app:layout_constraintTop_toTopOf="@id/cl_0"
+                app:shape_radius="13dp"
+                app:shape_solidColor="#4D000000">
+
+                <ImageView
+                    android:id="@+id/iv_phone_icon"
+                    android:layout_width="17dp"
+                    android:layout_height="33dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="14dp"
+                    android:background="@mipmap/ic_notice_phone_small_icon"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:text="@string/alert_on_nphone"
+                    android:textColor="#E6FFFFFF"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_phone_icon"
+                    app:layout_constraintStart_toEndOf="@id/iv_phone_icon"
+                    app:layout_constraintTop_toTopOf="@id/iv_phone_icon" />
+
+                <com.hjq.widget.view.SwitchButton
+                    android:id="@+id/sw_speed_alarm_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="9dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <ImageView
+                    android:id="@+id/speed_test_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_alarm_test"
+                    app:layout_constraintBottom_toBottomOf="@id/sw_speed_alarm_phone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/sw_speed_alarm_phone" />
+            </com.hjq.shape.layout.ShapeConstraintLayout>
+
+            <TextView
+                android:id="@+id/tv_threshold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="42dp"
+                android:text="@string/alert_threshold"
+                android:textColor="@color/white90"
+                android:textSize="21sp"
+                app:layout_constraintStart_toStartOf="@id/cl_0"
+                app:layout_constraintTop_toBottomOf="@id/cl_0" />
+
+            <TextView
+                android:id="@+id/tv_threshold_desc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/an_alert_is_triggered_when"
+                android:textColor="@color/white90"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="@id/cl_1"
+                app:layout_constraintStart_toStartOf="@id/cl_0"
+                app:layout_constraintTop_toBottomOf="@id/tv_threshold" />
+
+            <com.hjq.shape.layout.ShapeConstraintLayout
+                android:id="@+id/cl_threshold_title"
+                android:layout_width="0dp"
+                android:layout_height="49dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="@id/cl_1"
+                app:layout_constraintStart_toStartOf="@id/cl_0"
+                app:layout_constraintTop_toBottomOf="@id/tv_threshold_desc"
+                app:shape_radius="30dp"
+                app:shape_solidColor="#4D000000">
+
+                <TextView
+                    android:id="@+id/tv_threshold0"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/selector_threshold_title"
+                    android:gravity="center"
+                    android:text="km/h (mp/h)"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toStartOf="@id/tv_threshold1"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_threshold1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/selector_threshold_title"
+                    android:gravity="center"
+                    android:text="%"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/tv_threshold0" />
+
+            </com.hjq.shape.layout.ShapeConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/bg_alram_switch"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cl_threshold_title">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@id/seek_time"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/tv_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        android:textColor="@color/white90"
+                        android:textSize="116sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="km/h (mph)"
+                        android:textColor="@color/white90"
+                        android:textSize="27sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_number" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <SeekBar
+                    android:id="@+id/seek_time"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="7dp"
+                    android:max="30"
+                    android:maxHeight="6dp"
+                    android:minHeight="6dp"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="0dp"
+                    android:progress="10"
+                    android:progressDrawable="@drawable/seekbar_threshold_background"
+                    android:splitTrack="false"
+                    android:thumb="@drawable/bg_seekbar_thumb"
+                    android:thumbOffset="0dp"
+                    app:layout_constraintBottom_toTopOf="@id/tv_start"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <ImageView
+                    android:id="@+id/iv_dot_start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_seekbar_dot"
+                    app:layout_constraintBottom_toBottomOf="@id/seek_time"
+                    app:layout_constraintStart_toStartOf="@id/seek_time"
+                    app:layout_constraintTop_toTopOf="@id/seek_time" />
+
+                <ImageView
+                    android:id="@+id/iv_dot_end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_seekbar_dot"
+                    app:layout_constraintBottom_toBottomOf="@id/seek_time"
+                    app:layout_constraintEnd_toEndOf="@id/seek_time"
+                    app:layout_constraintTop_toTopOf="@id/seek_time" />
+
+                <TextView
+                    android:id="@+id/tv_start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="40dp"
+                    android:text="0"
+                    android:textColor="#ff333333"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/seek_time" />
+
+                <TextView
+                    android:id="@+id/tv_end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="30"
+                    android:textColor="#ff333333"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="@id/seek_time"
+                    app:layout_constraintTop_toTopOf="@id/tv_start" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_notice_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="200dp"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_top_bg1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="-50dp"
+                android:layout_marginTop="-50dp"
+                android:layout_marginEnd="-50dp"
+                android:background="@mipmap/ic_notice_bg_1"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_device1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/ic_notice_device_icon_0"
+                app:layout_constraintBottom_toBottomOf="@id/iv_top_bg1"
+                app:layout_constraintEnd_toEndOf="@id/iv_top_bg1"
+                app:layout_constraintStart_toStartOf="@id/iv_top_bg1"
+                app:layout_constraintTop_toTopOf="@id/iv_top_bg1" />
+
+            <TextView
+                android:id="@+id/tv_01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="71dp"
+                android:text="@string/road_hazard_alert_nsettings"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_device1" />
+
+            <TextView
+                android:id="@+id/tv_11"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="18dp"
+                android:layout_marginTop="6dp"
+                android:text="@string/get_advance_alerts_for_reported"
+                android:textColor="#E6FFFFFF"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_01" />
+
+            <TextView
+                android:id="@+id/tv_21"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="18dp"
+                android:layout_marginTop="26dp"
+                android:text="@string/enable_alerts"
+                android:textColor="#E6FFFFFF"
+                android:textSize="21sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_11" />
+
+            <com.hjq.shape.layout.ShapeConstraintLayout
+                android:id="@+id/cl_01"
+                android:layout_width="0dp"
+                android:layout_height="111dp"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toStartOf="@id/cl_11"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_21"
+                app:shape_radius="13dp"
+                app:shape_solidColor="#1aFFFFFF">
+
+                <ImageView
+                    android:id="@+id/iv_device_icon1"
+                    android:layout_width="30dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="14dp"
+                    android:background="@mipmap/ic_notice_device_small_icon"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:text="@string/alert_on_ndevice"
+                    android:textColor="#E6FFFFFF"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_device_icon1"
+                    app:layout_constraintStart_toEndOf="@id/iv_device_icon1"
+                    app:layout_constraintTop_toTopOf="@id/iv_device_icon1" />
+
+                <com.hjq.widget.view.SwitchButton
+                    android:id="@+id/sw_road_alarm_device"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="9dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <ImageView
+                    android:id="@+id/road_test_device"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_alarm_test"
+                    app:layout_constraintBottom_toBottomOf="@id/sw_road_alarm_device"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/sw_road_alarm_device" />
+            </com.hjq.shape.layout.ShapeConstraintLayout>
+
+            <com.hjq.shape.layout.ShapeConstraintLayout
+                android:id="@+id/cl_11"
+                android:layout_width="0dp"
+                android:layout_height="111dp"
+                android:layout_marginStart="9dp"
+                android:layout_marginEnd="17dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/cl_01"
+                app:layout_constraintTop_toTopOf="@id/cl_01"
+                app:shape_radius="13dp"
+                app:shape_solidColor="#1aFFFFFF">
+
+                <ImageView
+                    android:id="@+id/iv_phone_icon1"
+                    android:layout_width="17dp"
+                    android:layout_height="33dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="14dp"
+                    android:background="@mipmap/ic_notice_phone_small_icon"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:text="@string/alert_on_nphone"
+                    android:textColor="#E6FFFFFF"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_phone_icon1"
+                    app:layout_constraintStart_toEndOf="@id/iv_phone_icon1"
+                    app:layout_constraintTop_toTopOf="@id/iv_phone_icon1" />
+
+                <com.hjq.widget.view.SwitchButton
+                    android:id="@+id/sw_road_alarm_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="9dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <ImageView
+                    android:id="@+id/road_test_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_alarm_test"
+                    app:layout_constraintBottom_toBottomOf="@id/sw_road_alarm_phone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/sw_road_alarm_phone" />
+            </com.hjq.shape.layout.ShapeConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_notice_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_top_bg2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="-50dp"
+                android:layout_marginTop="-50dp"
+                android:layout_marginEnd="-50dp"
+                android:background="@mipmap/ic_notice_bg_2"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_device2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/ic_notice_device_icon_0"
+                app:layout_constraintBottom_toBottomOf="@id/iv_top_bg2"
+                app:layout_constraintEnd_toEndOf="@id/iv_top_bg2"
+                app:layout_constraintStart_toStartOf="@id/iv_top_bg2"
+                app:layout_constraintTop_toTopOf="@id/iv_top_bg2" />
+
+            <TextView
+                android:id="@+id/tv_02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="71dp"
+                android:text="@string/speed_camera_alert_nsettings"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_device2" />
+
+            <TextView
+                android:id="@+id/tv_12"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="18dp"
+                android:layout_marginTop="6dp"
+                android:text="@string/get_advance_alerts_for_fixed"
+                android:textColor="#E6FFFFFF"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_02" />
+
+
+
+            <TextView
+                android:id="@+id/tv_22"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="18dp"
+                android:layout_marginTop="26dp"
+                android:text="@string/enable_alerts"
+                android:textColor="#E6FFFFFF"
+                android:textSize="21sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_12"/>
+
+            <com.hjq.shape.layout.ShapeConstraintLayout
+                android:id="@+id/cl_02"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/selector_alarm_bg"
+                app:layout_constraintEnd_toStartOf="@id/cl_12"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_22">
+
+                <ImageView
+                    android:id="@+id/iv_device_icon2"
+                    android:layout_width="22dp"
+                    android:layout_height="23dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="14dp"
+                    android:background="@mipmap/ic_notice_device_small_icon"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_speed_warn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/alert_on_device"
+                    android:textColor="#E6FFFFFF"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/iv_device_icon2"
+                    app:layout_constraintTop_toBottomOf="@id/iv_device_icon2" />
+
+                <ImageView
+                    android:id="@+id/speed_warn_test_device"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="2dp"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_alarm_test"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_device_icon2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/iv_device_icon2" />
+            </com.hjq.shape.layout.ShapeConstraintLayout>
+
+            <com.hjq.shape.layout.ShapeConstraintLayout
+                android:id="@+id/cl_12"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="9dp"
+                android:layout_marginEnd="17dp"
+                android:background="@drawable/selector_alarm_bg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/cl_02"
+                app:layout_constraintBottom_toBottomOf="@id/cl_02"
+                app:layout_constraintTop_toTopOf="@id/cl_02">
+
+                <ImageView
+                    android:id="@+id/iv_phone_icon2"
+                    android:layout_width="14dp"
+                    android:layout_height="27dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="14dp"
+                    android:background="@mipmap/ic_notice_phone_small_icon"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/alert_on_phone"
+                    android:textColor="#E6FFFFFF"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/iv_phone_icon2"
+                    app:layout_constraintTop_toBottomOf="@id/iv_phone_icon2" />
+
+                <ImageView
+                    android:id="@+id/speed_warn_test_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="2dp"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_alarm_test"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_phone_icon2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/iv_phone_icon2" />
+
+            </com.hjq.shape.layout.ShapeConstraintLayout>
+
+            <com.hjq.shape.layout.ShapeConstraintLayout
+                android:id="@+id/cl_speed"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="18dp"
+                android:layout_marginTop="18dp"
+                android:paddingVertical="25dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cl_02"
+                app:shape_radius="22dp"
+                app:shape_solidColor="#66000000">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="11dp"
+                    android:background="@mipmap/ic_fixed_speed"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="57dp"
+                    android:text="@string/mobile_speed_camera"
+                    android:textColor="@color/white90"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.hjq.widget.view.SwitchButton
+                    android:id="@+id/sw_mobile_speed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="24dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </com.hjq.shape.layout.ShapeConstraintLayout>
+
+            <com.hjq.shape.layout.ShapeConstraintLayout
+                android:id="@+id/cl_fixed_speed"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="18dp"
+                android:layout_marginTop="7dp"
+                android:paddingVertical="25dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cl_speed"
+                app:shape_radius="22dp"
+                app:shape_solidColor="#66000000">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="11dp"
+                    android:background="@mipmap/ic_moble_speed"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="57dp"
+                    android:text="@string/fixed_speed_camera"
+                    android:textColor="@color/white90"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.hjq.widget.view.SwitchButton
+                    android:id="@+id/sw_fixed_speed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="24dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </com.hjq.shape.layout.ShapeConstraintLayout>
+
+            <com.hjq.shape.layout.ShapeConstraintLayout
+                android:id="@+id/cl_light"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="18dp"
+                android:layout_marginTop="7dp"
+                android:paddingVertical="25dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cl_fixed_speed"
+                app:shape_radius="22dp"
+                app:shape_solidColor="#66000000">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="11dp"
+                    android:background="@mipmap/ic_traffic_light_camera"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="57dp"
+                    android:text="@string/traffic_light_camera"
+                    android:textColor="@color/white90"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.hjq.widget.view.SwitchButton
+                    android:id="@+id/sw_traffic_light_camera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="24dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </com.hjq.shape.layout.ShapeConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

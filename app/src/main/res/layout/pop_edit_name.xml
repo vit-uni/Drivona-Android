@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="20dp">
+
+    <com.drivona.speed.widght.blur.ShapeBlurView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:blur_corner_radius="18dp"
+        app:blur_overlay_color="#80333333"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="26dp"
+        android:text="Modify nickname"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_input"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/bg_ffffff_16_33"
+        android:hint="Please enter your new nickname"
+        android:paddingHorizontal="20dp"
+        android:singleLine="true"
+        android:textColor="#87FFFFFF"
+        android:textColorHint="#87FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+    <TextView
+        android:id="@+id/tv_sure"
+        android:layout_width="0dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="22dp"
+        android:background="@drawable/bg_btn_17"
+        android:gravity="center"
+        android:text="Done"
+        android:textColor="#ffffffff"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_input" />
+</androidx.constraintlayout.widget.ConstraintLayout>

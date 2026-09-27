@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="NameLayout">
+        <attr name="nl_name_color" format="color" />
+    </declare-styleable>
+    <declare-styleable name="RippleView">
+        <attr name="rippleColor" format="color" />
+        <attr name="rippleAlpha" format="integer" />
+        <attr name="rippleDuration" format="integer" />
+        <attr name="rippleCount" format="integer" />
+        <attr name="rippleSpacing" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="StatusBarView">
+        <attr name="sbv_title" format="string" />
+        <attr name="sbv_left_title" format="string" />
+        <attr name="sbv_left_icon" format="reference" />
+        <attr name="sbv_right_one_title" format="string" />
+        <attr name="sbv_show_state" format="boolean" />
+        <attr name="sbv_state_color" format="reference|color" />
+        <attr name="sbv_bg_color" format="reference|color" />
+        <attr name="sbv_title_color" format="reference|color" />
+        <attr name="sbv_left_title_color" format="reference|color" />
+        <attr name="sbv_left_title_size" format="dimension" />
+        <attr name="sbv_single_state" format="boolean" />
+        <attr name="sbv_right_one_title_color" format="reference|color" />
+        <attr name="sbv_show_line" format="integer">
+            <enum name="show" value="1" />
+            <enum name="hide" value="2" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="ui_widget_encryption_input_style">
+        <attr name="ui_widget_strokeWidth" format="dimension" />
+        <attr name="ui_widget_checkedColor" format="color" />
+        <attr name="ui_widget_defaultColor" format="color" />
+        <attr name="ui_widget_textLength" format="integer" />
+        <attr name="ui_widget_backColor" format="color" />
+        <attr name="ui_widget_textColor" format="color" />
+        <attr name="ui_widget_circle" format="dimension" />
+        <attr name="ui_widget_round" format="dimension" />
+        <attr name="ui_widget_textSize" format="dimension" />
+        <attr name="ui_widget_isPwd" format="boolean" />
+        <attr name="ui_widget_waitInputColor" format="color" />
+        <attr name="ui_widget_isWaitInput" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="ShapeBlurView">
+        <attr name="blur_radius" format="dimension" />
+        <attr name="blur_down_sample" format="float" />
+        <attr name="blur_overlay_color" format="color" />
+        <attr name="blur_corner_radius" format="dimension" />
+        <attr name="blur_corner_radius_top_left" format="dimension" />
+        <attr name="blur_corner_radius_top_right" format="dimension" />
+        <attr name="blur_corner_radius_bottom_left" format="dimension" />
+        <attr name="blur_corner_radius_bottom_right" format="dimension" />
+        <attr name="blur_border_width" format="dimension" />
+        <attr name="blur_border_color" format="color" />
+        <attr name="blur_mode">
+            <enum name="rectangle" value="0" />
+            <enum name="circle" value="1" />
+            <enum name="oval" value="2" />
+        </attr>
+    </declare-styleable>
+</resources>

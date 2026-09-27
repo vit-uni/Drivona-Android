@@ -1,0 +1,2 @@
+configurations.maybeCreate("default")
+artifacts.add("default", file("bugly-4.1.9.2.aar"))

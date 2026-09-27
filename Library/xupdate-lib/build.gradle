@@ -1,0 +1,30 @@
+apply plugin: 'com.android.library'
+//apply plugin: 'img-optimizer'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdk
+    buildToolsVersion build_versions.build_tools
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdk
+        targetSdkVersion rootProject.ext.targetSdk
+
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation android_ui.appcompat
+    api 'com.github.xuexiangjys.XUpdateAPI:xupdate-easy:1.0.1'
+    // 如果需要使用断点续传下载功能的话添加该依赖（可选）
+    api 'com.github.xuexiangjys.XUpdateAPI:xupdate-downloader-aria:1.0.1'
+}
+
+apply from: "../JitPackUpload.gradle"

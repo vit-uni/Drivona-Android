@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="17dp"
+    android:layout_marginBottom="8dp"
+    android:background="@drawable/selector_dest_item"
+    android:paddingStart="18dp"
+    android:paddingEnd="8dp"
+    android:paddingTop="9dp"
+    android:paddingBottom="11dp">
+
+    <ImageView
+        android:id="@+id/iv_0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_user_location_start"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:src="@drawable/ic_location_delete"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="38dp"
+        android:singleLine="true"
+        android:text="Route 1"
+        android:textColor="@color/white90"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@id/tv_name_desc"
+        app:layout_constraintEnd_toStartOf="@id/iv_delete"
+        app:layout_constraintStart_toEndOf="@id/iv_0"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/tv_name_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="38dp"
+        android:singleLine="true"
+        android:text="1H29Min"
+        android:textColor="@color/white60"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/iv_delete"
+
+        app:layout_constraintStart_toStartOf="@id/tv_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_name" />
+</androidx.constraintlayout.widget.ConstraintLayout>

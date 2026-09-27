@@ -1,0 +1,184 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    alias(libs.plugins.kotlinAndroid)
+    id 'kotlin-kapt'
+}
+
+android {
+    namespace = "com.lalifa.base"
+    compileSdk 33
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdk
+        targetSdkVersion rootProject.ext.targetSdk
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_18
+        targetCompatibility JavaVersion.VERSION_18
+    }
+
+//    //配置keystore签名
+//    signingConfigs {
+//        release {
+//            storeFile file("E:/work/yyf/app/key.jks")
+//            storePassword "lalifa"
+//            keyAlias "key1"
+//            keyPassword "lalifa"
+//        }
+//    }
+//    buildTypes {
+//        debug {
+//            signingConfig signingConfigs.release
+//        }
+//        release {
+//            signingConfig signingConfigs.release
+//        }
+//    }
+
+    buildFeatures {
+        viewBinding = true
+        dataBinding = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+//    sourceSets {
+//        main {
+//            jniLibs.srcDirs = ['libs']
+//        }
+//    }
+}
+
+dependencies {
+    api fileTree(include: ['*.jar', '*.aar'], dir: 'libs')
+//    api files('../libs/commons-io-1.4.jar')
+    api "androidx.core:core-ktx:1.9.0"
+    implementation android_ui.appcompat
+    implementation android_ui.material
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    api "androidx.collection:collection-ktx:1.1.0"
+    api "androidx.activity:activity-ktx:1.2.3"
+    api "androidx.fragment:fragment-ktx:1.3.5"
+
+    api "androidx.lifecycle:lifecycle-livedata-ktx:2.3.1"
+    api "androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1"
+    api "androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1"
+    api "androidx.lifecycle:lifecycle-common-java8:2.3.1"
+    //伸缩布局
+    api 'com.google.android.flexbox:flexbox:3.0.0'
+    // Shape 框架：https://github.com/getActivity/ShapeView
+    api 'com.github.getActivity:ShapeView:6.0'
+    //状态栏透明 https://liangjingkanji.github.io/StatusBar/
+    api 'com.github.liangjingkanji:StatusBar:2.0.2'
+    //事件分发 https://liangjingkanji.github.io/Channel/
+    api 'com.github.liangjingkanji:Channel:1.1.5'
+    //Tooltip https://liangjingkanji.github.io/Tooltip/
+    api 'com.github.liangjingkanji:Tooltip:1.2.1'
+    // 序列化 https://liangjingkanji.github.io/Serialize/
+    api 'com.github.liangjingkanji:Serialize:1.3.1'
+    // 支持自动下拉刷新和缺省页的万能适配器 https://liangjingkanji.github.io/BRV/
+    api 'com.github.liangjingkanji:BRV:1.3.85'
+    api 'io.github.scwang90:refresh-header-classics:2.0.5'
+    //图片加载库 https://github.com/bumptech/glide
+    //中文文档 https://muyangmin.github.io/glide-docs-cn/
+    api('com.github.bumptech.glide:glide:4.13.0') {
+        exclude group: "com.android.support"
+    }
+    kapt 'com.github.bumptech.glide:compiler:4.13.0'
+
+    api "com.github.goweii:Layer:1.0.7"
+    // 扩展库（依赖基础库）
+    api "com.github.goweii.Layer:layer-core:1.0.7"
+    // Kotlin扩展库（依赖基础库和扩展库）
+    // api "com.github.goweii.Layer:layer-ktx:1.0.3"
+
+    // 沉浸式框架：https://github.com/gyf-dev/ImmersionBar
+    api 'com.geyifeng.immersionbar:immersionbar:3.2.2'
+    // kotlin扩展（可选）
+    implementation 'com.geyifeng.immersionbar:immersionbar-ktx:3.2.2'
+
+    //gson
+    api 'com.google.code.gson:gson:2.9.0'
+    //图片选择库 https://github.com/yangpeixing/YImagePicker
+//    api 'com.ypx.yimagepicker:androidx:3.1.4'
+    api project(":Library:imagepicker")
+    //角标View
+    api 'q.rorbin:badgeview:1.1.3'
+    //大图预览 https://github.com/SherlockGougou/BigImageViewPager
+    api 'com.github.SherlockGougou:BigImageViewPager:androidx-7.3.0'
+    //卡片式轮播布局
+    api 'com.chenlittleping:recyclercoverflow:1.1.0'
+    //选择器 （时间、城市等，一二三级联动） https://github.com/Bigkoo/Android-PickerView
+    api 'com.contrarywind:Android-PickerView:4.1.9'
+    //日志 https://github.com/liangjingkanji/LogCat
+    api 'com.github.liangjingkanji:LogCat:1.2.4'
+    // 权限请求框架：https://github.com/getActivity/XXPermissions
+//    api 'com.github.getActivity:XXPermissions:16.2'
+    api project(":Library:permission")
+    //tab标签 https://github.com/H07000223/FlycoTabLayout
+    api 'io.github.h07000223:flycoTabLayout:3.0.0'
+
+    //》》》》》》》》》网络请求相关》》》》》》》》》》》
+    //网络请求库 https://liangjingkanji.github.io/Net/
+    api 'com.github.liangjingkanji:Net:3.4.10'
+    //okhttp
+    api "com.squareup.okhttp3:okhttp:$okhttp"
+    api "com.squareup.okhttp3:logging-interceptor:$okhttp"
+    //协程库
+    api 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
+    api 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4'
+
+//    api 'androidx.startup:startup-runtime:1.1.1'
+
+//下拉刷新上拉加载
+    api 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-20'
+    //noinspection GradleDependency
+    api 'com.android.support:multidex:1.0.3'
+    //eventbus事件总线
+    api 'org.greenrobot:eventbus:3.0.0'
+    //fastJson解析json
+    api 'com.alibaba:fastjson:1.2.69'
+
+    // https://github.com/HarlonWang/AVLoadingIndicatorView
+    api "com.wang.avi:library:2.1.3"
+
+    // https://github.com/google/gson
+    api "com.google.code.gson:gson:$gson"
+    api "com.airbnb.android:lottie:$lottieVersion"
+    //极光
+//    api 'cn.jiguang.sdk:jcore:3.3.0'  // 此处以JCore 3.3.0 版本为例。
+//    api 'cn.jiguang.sdk:jpush:4.7.2'  // 此处以JPush 4.7.2 版本为例
+    implementation 'org.jsoup:jsoup:1.13.1'
+    //支付宝
+    //noinspection GradleDynamicVersion
+//    api 'com.alipay.sdk:alipaysdk-android:+@aar'
+    //微信
+    //noinspection GradleDynamicVersion
+//    api 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+'
+    //spinner
+    api 'com.github.arcadefire:nice-spinner:1.3.1'
+    //加载SVGA 动画
+//    api 'com.github.yyued:SVGAPlayer-Android:2.6.1'
+
+    //表情库
+//    // https://github.com/vanniktech/Emoji
+//    api "com.vanniktech:emoji-ios:$emojiIos"
+//    // https://github.com/vdurmont/emoji-java
+//    api "com.vdurmont:emoji-java:$emojiJava"
+    api 'com.github.gjygit:editext:3.0'
+    api 'com.blankj:utilcodex:1.31.1'
+    api 'com.github.ctiao:DanmakuFlameMaster:0.9.25'
+
+    api project(':Library:banner')
+//    api project(':Library:tuivoiceroom')
+}

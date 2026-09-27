@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <declare-styleable name="XGridLayout">
+        <!--一列有多少个Item-->
+        <attr name="gridSpan" format="integer" />
+        <!--水平间距-->
+        <attr name="gridHorizontalSpace" format="dimension" />
+        <!--垂直间距-->
+        <attr name="gridVerticalSpace" format="dimension" />
+        <!--最大子View的个数-->
+        <attr name="gridMaxItem" format="integer" />
+        <!--条目的宽高是否一样-->
+        <attr name="gridIsSquare" format="boolean" />
+    </declare-styleable>
+
+    <style name="app_welcome_theme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="CircleStyle">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+    <style name="TopRound12Style">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">12dp</item>
+        <item name="cornerSizeTopRight">12dp</item>
+    </style>
+
+    <style name="TopRound4Style">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">4dp</item>
+        <item name="cornerSizeTopRight">4dp</item>
+    </style>
+    <style name="Round15Style">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">15dp</item>
+    </style>
+    <style name="Round12Style">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12dp</item>
+    </style>
+    <style name="Round20Style">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">20dp</item>
+    </style>
+    <style name="Round10Style">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">10dp</item>
+    </style>
+    <style name="RoundTop10Style">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">10dp</item>
+        <item name="cornerSizeTopRight">10dp</item>
+    </style>
+    <style name="Round8Style">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8dp</item>
+    </style>
+    <style name="Round6Style">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">6dp</item>
+    </style>
+    <style name="Round5Style">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">5dp</item>
+    </style>
+    <style name="Round4Style">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">4dp</item>
+    </style>
+    <!--  ****************  ILoad style **************** -->
+    <style name="Basis_Dialog_Style" parent="android:Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowFrame">@null</item><!--边框-->
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item><!--半透明-->
+        <item name="android:backgroundDimEnabled">false</item><!--模糊-->
+    </style>
+    <!--  ****************  bottom dialog  style  **************** -->
+    <style name="Basis_Style_Bottom_Menu" parent="android:Theme.Dialog">
+        <!--        <item name="android:windowBackground">@android:color/white</item>-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowAnimationStyle">@style/Basis_Style_Bottom_Menu_Anim</item>
+        <item name="android:windowFrame">@null</item><!--边框-->
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item><!--半透明-->
+        <item name="android:backgroundDimEnabled">false</item><!--模糊-->
+    </style>
+    <style name="Basis_Style_Bottom_Menu_Anim">
+        <item name="android:windowEnterAnimation">@anim/basis_anim_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/basis_anim_bottom_out</item>
+    </style>
+
+    <style name="Basis_Style_WX_Dialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+
+    <!--white 白色字体 style-->
+    <style name="main_white_17" tools:ignore="ResourceName">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/basis_17sp</item>
+    </style>
+
+    <style name="main_white_16" tools:ignore="ResourceName">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/basis_16sp</item>
+    </style>
+
+    <style name="main_white_15" tools:ignore="ResourceName">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/basis_15sp</item>
+    </style>
+
+    <style name="main_white_14" tools:ignore="ResourceName">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/basis_14sp</item>
+    </style>
+
+    <!--primary初级文字样式-->
+    <style name="main_primary_17" tools:ignore="ResourceName">
+        <item name="android:textColor">@color/basis_color_primary</item>
+        <item name="android:textSize">@dimen/basis_17sp</item>
+    </style>
+
+    <style name="main_primary_16" tools:ignore="ResourceName">
+        <item name="android:textColor">@color/basis_color_primary</item>
+        <item name="android:textSize">@dimen/basis_16sp</item>
+    </style>
+
+    <style name="main_primary_15" tools:ignore="ResourceName">
+        <item name="android:textColor">@color/basis_color_primary</item>
+        <item name="android:textSize">@dimen/basis_15sp</item>
+    </style>
+
+    <style name="main_primary_14" tools:ignore="ResourceName">
+        <item name="android:textColor">@color/basis_color_primary</item>
+        <item name="android:textSize">@dimen/basis_14sp</item>
+    </style>
+
+    <!--secondary次级文字样式-->
+
+    <style name="main_secondary_17" tools:ignore="ResourceName">
+        <item name="android:textColor">@color/basis_color_secondary</item>
+        <item name="android:textSize">@dimen/basis_17sp</item>
+    </style>
+
+    <style name="main_secondary_16" tools:ignore="ResourceName">
+        <item name="android:textColor">@color/basis_color_secondary</item>
+        <item name="android:textSize">@dimen/basis_16sp</item>
+    </style>
+
+
+    <style name="main_secondary_15" tools:ignore="ResourceName">
+        <item name="android:textColor">@color/basis_color_secondary</item>
+        <item name="android:textSize">@dimen/basis_15sp</item>
+    </style>
+
+    <style name="main_secondary_14" tools:ignore="ResourceName">
+        <item name="android:textColor">@color/basis_color_secondary</item>
+        <item name="android:textSize">@dimen/basis_14sp</item>
+    </style>
+
+    <style name="main_secondary_13" tools:ignore="ResourceName">
+        <item name="android:textColor">@color/basis_color_secondary</item>
+        <item name="android:textSize">@dimen/basis_13sp</item>
+    </style>
+
+    <style name="main_secondary_12" tools:ignore="ResourceName">
+        <item name="android:textColor">@color/basis_color_secondary</item>
+        <item name="android:textSize">@dimen/basis_12sp</item>
+    </style>
+
+    <!--分割线的style -->
+    <style name="basis_main_divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/basis_color_divider</item>
+        <item name="android:layout_height">@dimen/basis_main_divide</item>
+    </style>
+
+    <style name="basis_main_divider_30px" parent="@style/basis_main_divider">
+        <item name="android:layout_marginLeft">@dimen/basis_30px</item>
+        <item name="android:layout_marginRight">@dimen/basis_30px</item>
+    </style>
+
+    <style name="basis_main_divider_15px" parent="@style/basis_main_divider">
+        <item name="android:layout_marginLeft">@dimen/basis_15px</item>
+        <item name="android:layout_marginRight">@dimen/basis_15px</item>
+    </style>
+
+    <style name="CustomDialog" parent="android:style/Theme.Dialog">
+        <!--背景颜色及和透明程度-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--是否去除标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!--是否去除边框-->
+        <item name="android:windowFrame">@null</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--是否模糊-->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!--半透明-->
+        <item name="android:windowIsTranslucent">false</item>
+    </style>
+
+    <style name="CustomBottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="CustomBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/CustomBottomSheetStyle</item>
+    </style>
+
+    <!--    通用取消Button-->
+    <style name="cancelBut">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:layout_marginStart">4dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:background">@drawable/bg_gray10</item>
+    </style>
+    <!--通用确认/提交Button-->
+    <style name="commitBut">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginEnd">4dp</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:background">@drawable/bg_active</item>
+    </style>
+
+        <declare-styleable name="LeanTextView">
+            <attr name="degree" format="dimension">
+            </attr></declare-styleable>
+
+    <declare-styleable name="verify_EditText">
+        <!-- 验证码的个数 -->
+        <attr name="verify_count" format="integer" />
+        <!--        TextView 的宽度-->
+        <attr name="verify_width" format="dimension" />
+        <!--        TextView 的高度-->
+        <attr name="verify_height" format="dimension" />
+        <!--        TextView 的间隔-->
+        <attr name="verify_margin" format="dimension" />
+        <!--        TextView 的字体大小-->
+        <attr name="verify_textSize" format="dimension" />
+        <!--        TextView 的字体颜色-->
+        <attr name="verify_textColor" format="color" />
+        <!-- TextView 无值背景 -->
+        <attr name="verify_background_normal" format="reference" />
+        <!-- TextView 有值背景 -->
+        <attr name="verify_background_selected" format="reference" />
+        <!--        是否隐藏密码-->
+        <attr name="verify_password" format="boolean" />
+        <!--        密码显示时间ms-->
+        <attr name="verify_password_visible_time" format="integer" />
+        <!--        editText的输入类型 -->
+        <attr name="verify_inputType">
+            <flag name="none" value="0x00000000" />
+            <flag name="text" value="0x00000001" />
+            <flag name="textCapCharacters" value="0x00001001" />
+            <flag name="textCapWords" value="0x00002001" />
+            <flag name="textCapSentences" value="0x00004001" />
+            <flag name="textAutoCorrect" value="0x00008001" />
+            <flag name="textAutoComplete" value="0x00010001" />
+            <flag name="textMultiLine" value="0x00020001" />
+            <flag name="textImeMultiLine" value="0x00040001" />
+            <flag name="textNoSuggestions" value="0x00080001" />
+            <flag name="textUri" value="0x00000011" />
+            <flag name="textEmailAddress" value="0x00000021" />
+            <flag name="textEmailSubject" value="0x00000031" />
+            <flag name="textShortMessage" value="0x00000041" />
+            <flag name="textLongMessage" value="0x00000051" />
+            <flag name="textPersonName" value="0x00000061" />
+            <flag name="textPostalAddress" value="0x00000071" />
+            <flag name="textPassword" value="0x00000081" />
+            <flag name="textVisiblePassword" value="0x00000091" />
+            <flag name="textWebEditText" value="0x000000a1" />
+            <flag name="textFilter" value="0x000000b1" />
+            <flag name="textPhonetic" value="0x000000c1" />
+            <flag name="textWebEmailAddress" value="0x000000d1" />
+            <flag name="textWebPassword" value="0x000000e1" />
+            <flag name="number" value="0x00000002" />
+            <flag name="numberSigned" value="0x00001002" />
+            <flag name="numberDecimal" value="0x00002002" />
+            <flag name="numberPassword" value="0x00000012" />
+            <flag name="phone" value="0x00000003" />
+            <flag name="datetime" value="0x00000004" />
+            <flag name="date" value="0x00000014" />
+            <flag name="time" value="0x00000024" />
+        </attr>
+    </declare-styleable>
+
+    <style name="view_line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background">#e6e6e6</item>
+    </style>
+
+    <style name="view_line_3cccff">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">2dp</item>
+        <item name="android:background">#3CCCFF</item>
+    </style>
+
+    <style name="view_line_3cccff_dcdcdc">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">2dp</item>
+        <item name="android:background">@drawable/select_3cccff_dcdcdc</item>
+    </style>
+
+
+    <!-- 对话框默认主题 -->
+    <style name="BaseDialogTheme" parent="Theme.AppCompat.DayNight.Dialog.Alert"><!-- @android:style/Theme.Dialog -->
+        <!-- 无边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- 浮在 Activity 之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 背景透明 -->
+        <item name="android:windowBackground">@color/transparent</item>
+        <!-- 遮盖层 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 动画效果 -->
+        <item name="android:windowEnterAnimation">@anim/window_scale_in</item>
+        <item name="android:windowExitAnimation">@anim/window_scale_out</item>
+        <!-- Base.Theme.AppCompat.Light.Dialog.Alert 特有的属性，用于指定默认宽度，这里需要禁用 -->
+        <item name="android:windowMinWidthMajor">0dp</item>
+        <item name="android:windowMinWidthMinor">0dp</item>
+        <!-- 解决 ActionBar 占位导致 Dialog 无法全屏显示的问题 -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!-- ActionMode 覆盖 Actionbar，不顶下来 -->
+        <item name="windowActionModeOverlay">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 不感知敏感的切换 -->
+        <!--<item name="android:configChanges">orientation|screenSize|keyboardHidden</item>-->
+        <!-- 默认隐藏输入法 -->
+        <!--<item name="android:windowSoftInputMode">stateHidden</item>-->
+        <!-- Dialog 全屏显示 -->
+        <!--<item name="android:windowFullscreen">true</item>-->
+    </style>
+
+
+    <!-- 顶部弹出动画 -->
+    <style name="TopAnimStyle" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/window_top_in</item>
+        <item name="android:windowExitAnimation">@anim/window_top_out</item>
+    </style>
+
+    <!-- 底部弹出动画 -->
+    <style name="BottomAnimStyle" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/window_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/window_bottom_out</item>
+    </style>
+
+    <!-- 左边弹出动画 -->
+    <style name="LeftAnimStyle" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/window_left_in</item>
+        <item name="android:windowExitAnimation">@anim/window_left_out</item>
+    </style>
+
+    <!-- 右边弹出动画 -->
+    <style name="RightAnimStyle" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/window_right_in</item>
+        <item name="android:windowExitAnimation">@anim/window_right_out</item>
+    </style>
+</resources>

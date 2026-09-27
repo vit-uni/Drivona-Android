@@ -1,0 +1,60 @@
+package com.drivona.speed.tool;
+
+public class GiftInfo {
+    public static final int GIFT_TYPE_NORMAL              = 0;
+    public static final int GIFT_TYPE_SHOW_ANIMATION_PLAY = 1;
+
+    // 礼物id
+    public String  giftId;
+    //礼物图片对应的url
+    public String  giftPicUrl;
+    //礼物全屏动画url
+    public String  lottieUrl;
+    //礼物的名称
+    public String  title;
+    //礼物价格
+    public float price;
+    //礼物类型 0为普通礼物， 1为播放全屏动画
+    public int     type;
+    //礼物的选中状态
+    public boolean isSelected;
+    //礼物发送方名称
+    public String  sendUser;
+    //礼物发送方头像
+    public String  sendUserHeadIcon;
+    //礼物数量
+    public int  num;
+
+    @Override
+    public String toString() {
+        return "GiftInfo{" +
+                "giftId='" + giftId + '\'' +
+                ", giftPicUrl='" + giftPicUrl + '\'' +
+                ", lottieUrl='" + lottieUrl + '\'' +
+                ", title='" + title + '\'' +
+                ", price=" + price +
+                ", type=" + type +
+                ", isSelected=" + isSelected +
+                ", sendUser='" + sendUser + '\'' +
+                ", sendUserHeadIcon='" + sendUserHeadIcon + '\'' +
+                ", num=" + num +
+                '}';
+    }
+
+    /**
+     * 拷贝礼物基础属性
+     *
+     * @return
+     */
+    public GiftInfo copy() {
+        GiftInfo giftInfo = new GiftInfo();
+        giftInfo.giftId = this.giftId;
+        giftInfo.giftPicUrl = this.giftPicUrl;
+        giftInfo.lottieUrl = this.lottieUrl;
+        giftInfo.title = this.title;
+        giftInfo.price = this.price;
+        giftInfo.type = this.type;
+        giftInfo.num = this.num;
+        return giftInfo;
+    }
+}

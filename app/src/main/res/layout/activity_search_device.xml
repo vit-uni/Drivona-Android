@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".ui.activity.login.LoginActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_splash_bg" />
+
+    <com.drivona.speed.widght.StatusBarView
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:sbv_single_state="true" />
+
+
+    <TextView
+        android:id="@+id/tv_0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/search_for_devices"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/iv_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/iv_back" />
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+
+        android:src="@mipmap/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_bar" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/iv_bg_2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/ic_search_device_top"
+        app:layout_constraintDimensionRatio="w,1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_0">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/iv_bg_0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:background="@drawable/ic_search_target_icon"
+        app:layout_constraintBottom_toBottomOf="@id/iv_bg_2"
+        app:layout_constraintDimensionRatio="w,1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/iv_bg_2" />
+
+
+    <TextView
+        android:id="@+id/tv_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:text="@string/searching"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/iv_bg_0"
+        app:layout_constraintStart_toStartOf="@id/iv_bg_0"
+        app:layout_constraintTop_toBottomOf="@id/iv_bg_0" />
+
+    <ImageView
+        android:id="@+id/iv_dot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:src="@drawable/ic_search_dot_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_1" />
+
+    <TextView
+        android:id="@+id/tv_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="44dp"
+        android:layout_marginTop="11dp"
+        android:gravity="center"
+        android:text="@string/can_t_find_your_device_check"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_dot" />
+
+    <TextView
+        android:id="@+id/tv_empty"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="44dp"
+        android:layout_marginTop="11dp"
+        android:gravity="center"
+        android:text="@string/no_devices_found"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_desc" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_pre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/ic_banner_pre"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/recyclerView"
+        app:layout_constraintStart_toStartOf="@id/recyclerView"
+        app:layout_constraintTop_toTopOf="@id/recyclerView" />
+
+    <ImageView
+        android:id="@+id/iv_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/ic_banner_next"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/recyclerView"
+        app:layout_constraintEnd_toEndOf="@id/recyclerView"
+        app:layout_constraintTop_toTopOf="@id/recyclerView" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_success"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_success"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="75dp"
+            android:text="@string/device_added"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/view_line"
+            android:layout_width="4dp"
+            android:layout_height="0dp"
+
+            android:background="@drawable/bg_dot_line"
+            app:layout_constraintBottom_toBottomOf="@id/tv_success_desc"
+            app:layout_constraintStart_toStartOf="@id/tv_success"
+            app:layout_constraintTop_toTopOf="@id/tv_success_desc" />
+
+        <TextView
+            android:id="@+id/tv_success_desc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginEnd="26dp"
+            android:text="@string/your_drivona_road_speed_alert"
+            android:textColor="@color/white"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/view_line"
+            app:layout_constraintTop_toBottomOf="@id/tv_success" />
+
+        <ImageView
+            android:layout_width="164dp"
+            android:layout_height="166dp"
+            android:layout_marginBottom="10dp"
+            android:background="@mipmap/ic_device_connect_success"
+            app:layout_constraintBottom_toTopOf="@id/tv_success_desc1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_success_desc" />
+
+        <View
+            android:id="@+id/view_line1"
+            android:layout_width="4dp"
+            android:layout_height="0dp"
+
+            android:background="@drawable/bg_dot_line"
+            app:layout_constraintBottom_toBottomOf="@id/tv_success_desc1"
+            app:layout_constraintStart_toStartOf="@id/tv_success"
+            app:layout_constraintTop_toTopOf="@id/tv_success_desc1" />
+
+        <TextView
+            android:id="@+id/tv_success_desc1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="9dp"
+            android:layout_marginEnd="26dp"
+            android:layout_marginBottom="17dp"
+            android:text="@string/view_the_user_manual_to_learn_how_to_get"
+            android:textColor="@color/white"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toTopOf="@id/tv_finish"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/view_line" />
+
+        <TextView
+            android:id="@+id/tv_finish"
+            android:layout_width="0dp"
+            android:layout_height="47dp"
+            android:layout_marginHorizontal="17dp"
+            android:layout_marginBottom="59dp"
+            android:background="@drawable/bg_login_btn_16"
+            android:gravity="center"
+            android:text="@string/finish"
+            android:textColor="#ffffffff"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_fail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_fail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="75dp"
+            android:text="@string/we_couldn_t_connect_your_device"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="164dp"
+            android:layout_height="166dp"
+            android:layout_marginBottom="10dp"
+            android:background="@mipmap/ic_device_connect_fail"
+            app:layout_constraintBottom_toTopOf="@id/tv_reconnect_desc5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_fail" />
+
+
+        <TextView
+            android:id="@+id/tv_reconnect_desc1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="9dp"
+            android:layout_marginEnd="26dp"
+            android:layout_marginBottom="17dp"
+            android:text="@string/then_try_connecting_again"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@id/tv_reconnect"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tv_fail" />
+
+
+        <TextView
+            android:id="@+id/tv_reconnect_desc2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="26dp"
+            android:layout_marginBottom="25dp"
+            android:drawableStart="@drawable/bg_dot"
+            android:drawablePadding="12dp"
+            android:text="@string/keep_the_app_open_while_pairing"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@id/tv_reconnect_desc1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tv_fail" />
+
+        <TextView
+            android:id="@+id/tv_reconnect_desc3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:drawableStart="@drawable/bg_dot"
+            android:drawablePadding="12dp"
+            android:text="@string/make_sure_your_phone_and_device_have_enough_battery"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@id/tv_reconnect_desc2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tv_fail" />
+
+        <TextView
+            android:id="@+id/tv_reconnect_desc4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:drawableStart="@drawable/bg_dot"
+            android:drawablePadding="12dp"
+            android:text="@string/keep_your_phone_close_to_the_device"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@id/tv_reconnect_desc3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tv_fail" />
+
+        <TextView
+            android:id="@+id/tv_reconnect_desc5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="22dp"
+
+            android:text="@string/make_sure_the_following_requirements_are_met"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@id/tv_reconnect_desc4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tv_fail" />
+
+        <TextView
+            android:id="@+id/tv_reconnect"
+            android:layout_width="0dp"
+            android:layout_height="47dp"
+            android:layout_marginHorizontal="17dp"
+            android:layout_marginBottom="59dp"
+            android:background="@drawable/bg_login_btn_16"
+            android:gravity="center"
+            android:text="@string/reconnect"
+            android:textColor="#ffffffff"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:id="@+id/cl_empty"
+        android:background="#000000"
+        android:visibility="gone"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_splash_bg" />
+        <com.drivona.speed.widght.StatusBarView
+            android:id="@+id/title_bar1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:sbv_single_state="true" />
+
+
+        <TextView
+            android:id="@+id/tv_01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/search_for_devices"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/iv_back1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/iv_back1" />
+
+        <ImageView
+            android:id="@+id/iv_back1"
+            android:layout_width="49dp"
+            android:layout_height="49dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+
+            android:src="@mipmap/ic_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title_bar1" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/iv_bg_21"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/ic_search_device_top"
+            app:layout_constraintDimensionRatio="w,1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_01">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/iv_bg_01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/ic_search_target_icon"
+            app:layout_constraintBottom_toBottomOf="@id/iv_bg_21"
+            app:layout_constraintDimensionRatio="w,1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/iv_bg_21" />
+
+        <TextView
+            android:id="@+id/tv_11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:text="@string/no_devices_found"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/iv_bg_01"
+            app:layout_constraintStart_toStartOf="@id/iv_bg_01"
+            app:layout_constraintTop_toBottomOf="@id/iv_bg_01" />
+
+        <TextView
+            android:id="@+id/tv_fail2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="75dp"
+
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/tv_reconnect_desc12"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="9dp"
+            android:layout_marginEnd="26dp"
+            android:layout_marginBottom="17dp"
+            android:text="@string/then_try_connecting_again"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@id/tv_reconnect2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tv_fail2" />
+
+
+        <TextView
+            android:id="@+id/tv_reconnect_desc22"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="26dp"
+            android:layout_marginBottom="25dp"
+            android:drawableStart="@drawable/bg_dot"
+            android:drawablePadding="12dp"
+            android:text="@string/keep_the_app_open_while_pairing"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@id/tv_reconnect_desc12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tv_fail2" />
+
+        <TextView
+            android:id="@+id/tv_reconnect_desc32"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:drawableStart="@drawable/bg_dot"
+            android:drawablePadding="12dp"
+            android:text="@string/make_sure_your_phone_and_device_have_enough_battery"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@id/tv_reconnect_desc22"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tv_fail2" />
+
+        <TextView
+            android:id="@+id/tv_reconnect_desc42"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:drawableStart="@drawable/bg_dot"
+            android:drawablePadding="12dp"
+            android:text="@string/keep_your_phone_close_to_the_device"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@id/tv_reconnect_desc32"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tv_fail2" />
+
+        <TextView
+            android:id="@+id/tv_reconnect_desc52"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="22dp"
+
+            android:text="@string/make_sure_the_following_requirements_are_met"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@id/tv_reconnect_desc42"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tv_fail2" />
+
+        <TextView
+            android:id="@+id/tv_reconnect2"
+            android:layout_width="0dp"
+            android:layout_height="47dp"
+            android:layout_marginHorizontal="17dp"
+            android:layout_marginBottom="59dp"
+            android:background="@drawable/bg_login_btn_16"
+            android:gravity="center"
+            android:text="@string/search_again"
+            android:textColor="#ffffffff"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

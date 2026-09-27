@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".ui.activity.login.LoginActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_splash_bg" />
+
+    <com.drivona.speed.widght.StatusBarView
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:sbv_single_state="true" />
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:src="@mipmap/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_bar" />
+
+    <TextView
+        android:id="@+id/t1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="112dp"
+        android:text="@string/help_us_improve"
+        android:textColor="@color/white90"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="4dp"
+        android:layout_height="0dp"
+        android:layout_marginVertical="4dp"
+        android:background="@drawable/bg_dot_line"
+        app:layout_constraintBottom_toBottomOf="@id/tv_desc"
+        app:layout_constraintStart_toStartOf="@id/t1"
+        app:layout_constraintTop_toTopOf="@id/tv_desc" />
+
+    <TextView
+        android:id="@+id/tv_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/your_feedback_helps_us_improve"
+        android:textColor="@color/white90"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/view_line"
+        app:layout_constraintTop_toBottomOf="@id/t1" />
+
+    <TextView
+        android:id="@+id/t2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/what_would_you_like_to_share"
+        android:textColor="@color/white90"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_desc" />
+
+    <TextView
+        android:id="@+id/t3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/name"
+        android:textColor="@color/white90"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/t2" />
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="0dp"
+        android:layout_height="42dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/bg_login_input"
+        android:hint="@string/enter_your_name"
+        android:paddingHorizontal="15dp"
+        android:textColor="@color/color_login_input"
+        android:textColorHint="#919191"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/t3" />
+
+    <TextView
+        android:id="@+id/t4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/email"
+        android:textColor="@color/white90"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etName" />
+
+    <EditText
+        android:id="@+id/et_email"
+        android:layout_width="0dp"
+        android:layout_height="42dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/bg_login_input"
+        android:hint="@string/enter_your_email_address"
+        android:paddingHorizontal="15dp"
+        android:textColor="@color/color_login_input"
+        android:textColorHint="#919191"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/t4" />
+
+    <TextView
+        android:id="@+id/t5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/feedback"
+        android:textColor="@color/white90"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_email" />
+
+    <EditText
+        android:id="@+id/et_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/bg_login_input"
+        android:gravity="start"
+        android:hint="@string/describe_your_issue_or_suggestion_include_your"
+        android:padding="15dp"
+        android:textColor="@color/color_login_input"
+        android:textColorHint="#919191"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toTopOf="@id/next"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/t5" />
+
+    <TextView
+        android:id="@+id/next"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="23dp"
+        android:background="@drawable/selector_login_btn"
+        android:gravity="center"
+        android:text="@string/send"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

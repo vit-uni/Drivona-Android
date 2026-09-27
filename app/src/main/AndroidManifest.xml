@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- 全局移除所有来源的旧蓝牙权限，解决Play重复maxSdkVersion报错 -->
+    <uses-permission
+        android:name="android.permission.BLUETOOTH"
+        tools:node="remove" />
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_ADMIN"
+        tools:node="remove" />
+
+    <!-- Android12+蓝牙权限 BLE扫描 + Android Auto车机蓝牙连接 -->
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_SCAN"
+        android:usesPermissionFlags="neverForLocation"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+
+    <!-- 位置权限，仅保留一次 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+
+    <!-- Android Car App 导航模板权限 -->
+    <uses-permission android:name="androidx.car.app.NAVIGATION_TEMPLATES" />
+    <uses-permission android:name="androidx.car.app.ACCESS_SURFACE" />
+    <queries>
+
+        <!-- 拍照意图：MediaStore.ACTION_IMAGE_CAPTURE -->
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE" />
+        </intent>
+
+        <!-- 拍摄意图：MediaStore.ACTION_VIDEO_CAPTURE -->
+        <intent>
+            <action android:name="android.media.action.VIDEO_CAPTURE" />
+        </intent>
+
+        <!-- 图片裁剪意图 -->
+        <intent>
+            <action android:name="com.android.camera.action.CROP" />
+        </intent>
+
+        <!-- 打电话意图：Intent.ACTION_DIAL -->
+        <intent>
+            <action android:name="android.intent.action.DIAL" />
+        </intent>
+
+        <!-- 调起分享意图：Intent.ACTION_SEND -->
+        <intent>
+            <action android:name="android.intent.action.SEND" />
+        </intent>
+
+        <!-- 调起其他页面意图：Intent.ACTION_VIEW -->
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+        </intent>
+
+        <!-- 调起系统文件选择器：Intent.ACTION_GET_CONTENT -->
+        <intent>
+            <action android:name="android.intent.action.GET_CONTENT" />
+        </intent>
+    </queries>
+
+    <application
+        android:name=".MApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AnalogTelephone"
+        tools:replace="android:allowBackup"
+        tools:targetApi="31">
+        <activity
+            android:name=".ui.SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.activity.login.LoginActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.login.ForgotPasswordActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.login.LoginBindingPhoneActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.drivona.speed.ui.activity.login.RegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.drivona.speed.ui.activity.login.RegisterCodeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.drivona.speed.ui.activity.login.RegisterSuccessActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.drivona.speed.ui.activity.login.ForgotCodeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.drivona.speed.ui.activity.login.ForgotSuccessActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.drivona.speed.ui.activity.login.ForgotNewPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.drivona.speed.ui.activity.AddDeviceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.drivona.speed.ui.activity.AlarmSettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.drivona.speed.ui.activity.ThresholdSettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.drivona.speed.ui.activity.SearchDeviceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.drivona.speed.ui.activity.PairingDeviceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.drivona.speed.ui.activity.PairingSuccessDeviceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.drivona.speed.ui.activity.PairingFailedDeviceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.drivona.speed.ui.activity.login.ModifyPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.drivona.speed.ui.activity.login.ModifyPasswordNextActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.drivona.speed.ui.activity.login.ModifyPasswordSuccessActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.drivona.speed.ui.activity.login.ModifyEmailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.drivona.speed.ui.activity.login.ModifyEmailCodeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.drivona.speed.ui.activity.login.ModifyEmailSuccessActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.drivona.speed.ui.activity.UserFeedbackActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.drivona.speed.ui.activity.ProductSpecificationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.drivona.speed.ui.activity.ContactUsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.drivona.speed.ui.activity.LegalAgreementActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.drivona.speed.ui.activity.SearchLocationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.drivona.speed.ui.activity.SearchMapActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.drivona.speed.ui.activity.NavigationSettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.drivona.speed.ui.SplashLoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.drivona.speed.ui.activity.login.RegisterPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.drivona.speed.ui.activity.login.RegisterSetNameActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.drivona.speed.ui.activity.login.RegisterChoosePictureActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.drivona.speed.ui.MainNewActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.drivona.speed.ui.activity.MapActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.drivona.speed.ui.activity.SearchLocationOtherActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.drivona.speed.ui.UserSettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.drivona.speed.ui.activity.UserLocationListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.drivona.speed.ui.activity.login.EditSetNameActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.drivona.speed.ui.activity.login.ModifyEmailPreActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.drivona.speed.ui.activity.login.FeedBackActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.drivona.speed.ui.activity.map.MapMainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.drivona.speed.ui.activity.help.HelpFirstActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.drivona.speed.ui.activity.help.HelpSa01FirstActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.drivona.speed.ui.activity.help.HelpSa01SecondActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.drivona.speed.ui.activity.help.HelpSa01FiveActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.drivona.speed.ui.activity.help.HelpSa01ThirdActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.drivona.speed.ui.activity.help.HelpSa01FourActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.drivona.speed.ui.activity.help.HelpSa01FinishActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.drivona.speed.ui.activity.help.HelpSa02FirstActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.drivona.speed.ui.activity.help.HelpSa02SecondActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.drivona.speed.ui.activity.help.HelpSa02ThirdActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.drivona.speed.ui.activity.help.HelpSa02FiveActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.drivona.speed.ui.activity.help.HelpSa02SixActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.drivona.speed.ui.activity.help.HelpSa02FinishActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.drivona.speed.ui.activity.help.HelpSa02FourActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.drivona.speed.ui.activity.help.LocationPermissionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.drivona.speed.ui.activity.help.LocationPermissionAllowActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.drivona.speed.ui.LanguageActivity" />
+
+        <service
+            android:name=".utils.map.NavInfoReceivingService"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCM7U1dQw4hMHK0iRJr2caNATHdMKboFrU" />
+        <meta-data
+            android:name="ScopedStorage"
+            android:value="true" />
+
+        <meta-data
+            android:name="com.google.android.gms.car.application"
+            android:resource="@xml/automotive_app_desc" />
+        <!-- 声明 CarAppService -->
+
+        <service
+            android:name="com.drivona.speed.car.NavigationCarAppService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="androidx.car.app.CarAppService" />
+                <category android:name="androidx.car.app.category.NAVIGATION" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.car.app.action.NAVIGATE" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="geo" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.drivona.speed.car.NavigationService"
+            android:enabled="true"
+            android:exported="true"
+            android:foregroundServiceType="location"></service>
+
+        <meta-data
+            android:name="androidx.car.app.minCarApiLevel"
+            android:value="1" />
+
+
+    </application>
+
+</manifest>

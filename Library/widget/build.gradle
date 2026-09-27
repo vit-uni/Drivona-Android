@@ -1,0 +1,31 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    alias(libs.plugins.kotlinAndroid)
+    id 'kotlin-kapt'
+}
+
+android {
+    namespace = "com.hjq.widget"
+
+    compileSdk rootProject.ext.compileSdk
+    defaultConfig {
+        minSdk rootProject.ext.minSdk
+        targetSdk rootProject.ext.targetSdk
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_18
+        targetCompatibility JavaVersion.VERSION_18
+    }
+}
+dependencies {
+    // 依赖 libs 目录下所有的 jar 和 aar 包
+    implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs')
+
+    // AndroidX 库：https://github.com/androidx/androidx
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    // Material 库：https://github.com/material-components/material-components-android
+    implementation 'com.google.android.material:material:1.4.0'
+}

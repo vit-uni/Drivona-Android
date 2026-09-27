@@ -1,0 +1,261 @@
+<resources>
+    <string name="app_name">Drivona</string>
+    <string name="gift_send">send%s</string>
+    <string name="agree">Zustimmen</string>
+    <string name="cancel">Abbrechen</string>
+    <string name="tv_agree">同意</string>
+
+
+    <string name="maneuver_icon_description" translatable="false">The icon for the maneuver.</string>
+    <string name="maneuver" translatable="false">Maneuver</string>
+    <string name="instruction" translatable="false">Instruction</string>
+    <string name="driving_side" translatable="false">Driving Side</string>
+    <string name="roundabout_turn_number" translatable="false">Rndabt Turn Num</string>
+    <string name="next_destination_eta" translatable="false">Next Destination ETA</string>
+    <string name="next_destination_remaining_distance" translatable="false">Next Dest Dist Remaining</string>
+    <string name="final_destination_eta" translatable="false">Final Destination ETA</string>
+    <string name="final_destination_remaining_distance" translatable="false">Final Dest Dist Remaining</string>
+    <string name="timestamp" translatable="false">Timestamp</string>
+    <string name="current_step" translatable="false">Current Step</string>
+    <string name="previous_step" translatable="false">Prev Step</string>
+    <string name="next_step" translatable="false">Next Step</string>
+    <string name="set_destination_menu_option">Set Destination</string>
+    <string name="selection_text">Select a demo to launch below</string>
+    <string name="nav_methods_toggle_label">Nav methods</string>
+    <string name="map_methods_toggle_label">Map methods</string>
+    <string name="view_methods_toggle_label">View methods</string>
+    <string name="move_camera_to_melbourne_prompt">Move camera\nto Melbourne</string>
+    <string name="location_marker_prompt">Location marker</string>
+    <string name="nav_fwding_prompt">Nav fwding</string>
+    <string name="log_trip_info_prompt">Log\n trip info</string>
+    <string name="navigation_ui_prompt">Navigation\nUI</string>
+    <string name="trip_progress_bar_prompt">Trip progress\nbar</string>
+    <string name="switch_customizations_ui_prompt">Switch Customizations UI On/Off</string>
+    <string name="stop_trip_and_show_mapfragment_prompt">Stop trip and show MapFragment</string>
+    <string name="help_next">Tippen Sie auf „Weiter“, um die Warnfunktionen kurz kennenzulernen.</string>
+    <string name="allow_1">Standortzugriff auf „Immer zulassen“ setzen</string>
+    <string name="allow_2">Standortberechtigungen öffnen</string>
+    <string name="allow_3">Tippen Sie auf „Standortzugriff aktualisieren“, um die Einstellungen zu öffnen</string>
+
+
+    <string name="navigation_active" translatable="false">Navigating...</string>
+    <string name="navigation_rerouting" translatable="false">Rerouting...</string>
+    <string name="navigation_arrived" translatable="false">Arrived!</string>
+    <string name="home_destination_label" translatable="false">Home</string>
+    <string name="work_destination_label" translatable="false">Work</string>
+    <string name="route_preview" translatable="false">Routes</string>
+    <string name="settings_section_a_label" translatable="false">Section A</string>
+    <string name="settings_section_b_label" translatable="false">Section B</string>
+    <string name="settings_title" translatable="false">Settings</string>
+    <string name="settings_one_label" translatable="false">Setting One</string>
+    <string name="settings_one_pref" translatable="false">setting_one</string>
+    <string name="settings_two_label" translatable="false">Setting Two</string>
+    <string name="settings_two_pref" translatable="false">setting_two</string>
+    <string name="settings_three_label" translatable="false">Setting Three</string>
+    <string name="settings_three_pref" translatable="false">setting_three</string>
+    <string name="settings_four_label" translatable="false">Setting Four</string>
+    <string name="settings_four_pref" translatable="false">setting_four</string>
+    <string name="settings_five_label" translatable="false">Setting Five</string>
+    <string name="settings_five_pref" translatable="false">setting_five</string>
+    <string name="settings_six_label" translatable="false">Setting Six</string>
+    <string name="settings_six_pref" translatable="false">setting_six</string>
+
+    <!-- Alert card -->
+    <string name="navigation_alert_title">Is police still there?</string>
+    <string name="yes_action_title">Yes</string>
+    <string name="no_action_title">No</string>
+    <string name="yes_action_toast_msg">Yes button pressed!</string>
+    <string name="no_action_toast_msg">No button pressed!</string>
+    <string name="alert_timeout_toast_msg">Alert is timed out!</string>
+    <string name="alert_not_supported">Alert is not supported, use HUN instead</string>
+
+    <!-- Suggestion card -->
+    <string name="suggestion_card_home_title">Home</string>
+    <string name="suggestion_card_home_subtitle">3 km &#11825; 10th street</string>
+    <string name="suggestion_card_work_title">Work</string>
+    <string name="suggestion_card_work_subtitle">5 km &#11825; 3rd street</string>
+    <string name="create_an_account">Konto erstellen</string>
+    <string name="login">Anmelden</string>
+    <string name="email">E-Mail</string>
+    <string name="password">Passwort</string>
+    <string name="forgotten_password">Passwort vergessen?</string>
+    <string name="i_agree_to_the">Ich stimme den </string>
+    <string name="user_agreement">Nutzungsbedingungen</string>
+    <string name="and">und der</string>
+    <string name="privacy_policy">Datenschutzrichtlinie zu</string>
+    <string name="legal_notice">Rechtlicher Hinweis</string>
+    <string name="disagree">Ablehnen</string>
+    <string name="please_review_and_accept_the">"Please review and accept the "</string>
+    <string name="to_continue">, um fortzufahren.</string>
+    <string name="register">Registrierung</string>
+    <string name="invalid_email_address">Ungültige E-Mail-Adresse</string>
+    <string name="resend_code">Code erneut senden</string>
+    <string name="create_a_secure_password_that_s_easy_for_you_to_remember">Erstellen Sie ein sicheres Passwort, das Sie sich gut merken können.</string>
+    <string name="confirm_password">Passwort bestätigen</string>
+    <string name="next">Weiter</string>
+    <string name="add_a_profile_photo_you_can_change_it_anytime">Fügen Sie ein Profilbild hinzu. Sie können es jederzeit ändern.</string>
+    <string name="what_should_we_call_you">Wie dürfen wir Sie nennen?</string>
+    <string name="enter_your_name">Namen eingeben</string>
+    <string name="skip">Überspringen</string>
+    <string name="registration_complete_welcome_to_drivona_tap_below_for_a_quick_tour">Registrierung abgeschlossen! Willkommen bei DRIVONA. Tippen Sie unten, um eine kurze Einführung zu starten.</string>
+    <string name="welcome_to_drivona_your_smart_driving_companion">Willkommen bei DRIVONA – Ihrem intelligenten Begleiter unterwegs!</string>
+    <string name="get_started">Loslegen</string>
+    <string name="make_every_drive_smarter">Jede Fahrt smarter machen</string>
+    <string name="brings_real_time">DRIVONA vereint Echtzeit-Verkehrswarnungen, intelligente Routenplanung und aktuelle Straßeninformationen in einem Begleiter für unterwegs.</string>
+    <string name="connect_your_drivona">DRIVONA verbinden</string>
+    <string name="go_to_store">Zum Shop</string>
+    <string name="search_for_devices">Nach Geräten suchen</string>
+    <string name="searching">Suche läuft…</string>
+    <string name="connect">Verbinden</string>
+    <string name="can_t_find_your_device_check">Gerät nicht gefunden? Prüfen Sie den Akkustand und stellen Sie sicher, dass die drahtlose Verbindung auf Ihrem Smartphone aktiviert ist.</string>
+    <string name="device_added">Gerät hinzugefügt</string>
+    <string name="your_drivona_road_speed_alert">Ihr DRIVONA-Gerät für Straßen- und Geschwindigkeitswarnungen ist jetzt gekoppelt.</string>
+    <string name="view_the_user_manual_to_learn_how_to_get">Im Benutzerhandbuch erfahren Sie, wie Sie Ihr Gerät optimal nutzen.</string>
+    <string name="finish">Fertig</string>
+    <string name="we_couldn_t_connect_your_device">Verbindung zum Gerät nicht möglich</string>
+    <string name="make_sure_the_following_requirements_are_met">Stellen Sie sicher, dass die folgenden Voraussetzungen erfüllt sind:</string>
+    <string name="keep_your_phone_close_to_the_device">Smartphone in der Nähe des Geräts halten</string>
+    <string name="make_sure_your_phone_and_device_have_enough_battery">Sicherstellen, dass Smartphone und Gerät ausreichend geladen sind</string>
+    <string name="keep_the_app_open_while_pairing">App während der Kopplung geöffnet lassen</string>
+    <string name="then_try_connecting_again">Versuchen Sie anschließend erneut, eine Verbindung herzustellen.</string>
+    <string name="reconnecting">Verbindung wird wiederhergestellt…</string>
+    <string name="your_location_is_used">Ihr Standort wird ausschließlich zur Bereitstellung von Verkehrsfunktionen verwendet.</string>
+    <string name="drivona_uses_your_precise_location">DRIVONA nutzt Ihren genauen Standort, um präzise Verkehrswarnungen, intelligentere Routen und Hinweise auf Gefahren in der Nähe in Echtzeit bereitzustellen.</string>
+    <string name="precise_location_better_routes">Präziser Standort, bessere Routen</string>
+    <string name="automatically_connect_to_drivona">Automatisch mit DRIVONA verbinden</string>
+    <string name="allow_drivona_to_connect_to_your">Erlauben Sie DRIVONA, sich automatisch mit Ihrem Smartphone zu verbinden. Andernfalls müssen Sie das Gerät vor jeder Nutzung manuell erneut verbinden.</string>
+    <string name="return_to_the_drivona_app">Zur DRIVONA-App zurückkehren</string>
+    <string name="turn_on_auto_connect">Automatische Verbindung aktivieren</string>
+    <string name="how_drivona_alerts_work">So funktionieren DRIVONA-Warnungen</string>
+    <string name="previous">Zurück</string>
+    <string name="device_status">Gerätestatus</string>
+    <string name="view_connection_status_battery_level">Hier sehen Sie Verbindungsstatus, Akkustand und Gerätenamen.</string>
+    <string name="device_alert_settings">Gerätewarnungen</string>
+    <string name="choose_which_alerts_your_device">Legen Sie fest, welche Warnungen Ihr Gerät ausgibt und wie sie erfolgen.</string>
+    <string name="day_night_mode">Tag-/Nachtmodus</string>
+    <string name="switch_to_night_mode_in_low_light_conditions">Wechseln Sie bei wenig Licht in den Nachtmodus, um die Anzeige angenehmer zu machen.</string>
+    <string name="remove_device">Gerät entfernen</string>
+    <string name="remove_or_unlink_this_device_from">Sie können dieses Gerät jederzeit aus Ihrem Konto entfernen oder die Verknüpfung aufheben.</string>
+    <string name="display_light_volume">Anzeige, Licht &amp; Lautstärke</string>
+    <string name="adjust_your_device_settings_for_comfortable_use">Passen Sie die Geräteeinstellungen für eine angenehme Nutzung an.</string>
+    <string name="your_device_is_ready">Ihr Gerät ist bereit!</string>
+    <string name="welcome_to_the_drivona_traffic_alert_system">Willkommen beim DRIVONA-Verkehrswarnsystem.</string>
+    <string name="reconnect">Neu verbinden</string>
+    <string name="screen_brightness">Displayhelligkeit</string>
+    <string name="adjust_display_brightness">Displayhelligkeit anpassen</string>
+    <string name="warning_light_brightness">Helligkeit der Warnleuchte</string>
+    <string name="adjust_warning_light_brightness">Helligkeit der Warnleuchte anpassen</string>
+    <string name="alert_volume">Warnlautstärke</string>
+    <string name="adjust_alert_volume">Warnlautstärke anpassen</string>
+    <string name="rename_device">Gerät umbenennen</string>
+    <string name="enter_a_new_device_name">Geben Sie einen neuen Gerätenamen ein.</string>
+    <string name="done">Fertig</string>
+    <string name="speed_limit_alert_settings">Einstellungen für \nGeschwindigkeitswarnungen</string>
+    <string name="choose_how_drivona_warns_you">Legen Sie fest, wie DRIVONA Sie beim Überschreiten des Tempolimits warnt: sofort oder erst nach einer festgelegten Toleranz. Die Toleranz kann als Geschwindigkeitswert (km/h oder mph) oder als Prozentsatz über dem Tempolimit eingestellt werden.</string>
+    <string name="enable_alerts">Warnungen aktivieren</string>
+    <string name="alert_on_ndevice">Warnung auf \ndem Gerät</string>
+    <string name="alert_on_device">Warnung auf dem Gerät</string>
+    <string name="alert_on_nphone">Warnung auf \nSmartphone</string>
+    <string name="alert_on_phone">Warnung auf Smartphone</string>
+    <string name="alert_threshold">Warnschwelle</string>
+    <string name="an_alert_is_triggered_when">Eine Warnung wird ausgelöst, wenn die Schwelle überschritten wird.</string>
+    <string name="road_hazard_alert_nsettings">Einstellungen für \nGefahrenwarnungen</string>
+    <string name="get_advance_alerts_for_reported">Erhalten Sie frühzeitig Warnungen zu gemeldeten Ereignissen voraus, darunter Unfälle, Baustellen, Gefahrenstellen und liegen gebliebene Fahrzeuge.</string>
+    <string name="speed_camera_alert_nsettings">Einstellungen für \nBlitzerwarnungen</string>
+    <string name="get_advance_alerts_for_fixed">Erhalten Sie frühzeitig Warnungen vor festen und mobilen Blitzern sowie Ampelkameras voraus.</string>
+    <string name="mobile_speed_camera">Mobiler Blitzer</string>
+    <string name="fixed_speed_camera">Fester Blitzer</string>
+    <string name="traffic_light_camera">Ampelkamera</string>
+    <string name="night_mode_on">Nachtmodus aktiviert</string>
+    <string name="turn_on_wireless_connection_on_your_phone">Aktivieren Sie die drahtlose Verbindung auf Ihrem Smartphone.</string>
+    <string name="map_services_require_a_continuous">Die Kartendienste benötigen eine kontinuierliche Verbindung zum Gerät. Aktivieren Sie die drahtlose Verbindung in den Smartphone-Einstellungen, damit Warnungen zuverlässig funktionieren.</string>
+    <string name="open_settings">Einstellungen öffnen</string>
+    <string name="please_turn_on_location_services">Bitte aktivieren Sie die Ortungsdienste.</string>
+    <string name="map_services_need_access_to">Die Kartendienste benötigen Zugriff auf Ihren Standort, um präzise Navigation und Verkehrswarnungen bereitzustellen.</string>
+    <string name="connect_a_device_to_continue">Verbinden Sie ein Gerät, um fortzufahren.</string>
+    <string name="map_services_are_available_only_when">Kartendienste sind nur verfügbar, wenn ein Gerät verbunden ist. Verbinden Sie ein Gerät und versuchen Sie es erneut.</string>
+    <string name="connect_device">Gerät verbinden</string>
+    <string name="where_to">Wohin?</string>
+    <string name="search">Suchen</string>
+    <string name="home">Zuhause</string>
+    <string name="work">Arbeit</string>
+    <string name="favorites">Favoriten</string>
+    <string name="search_results">Suchergebnisse</string>
+    <string name="recent_searches">Letzte Suchen</string>
+    <string name="pin_your_most_used_addresses_for">Heften Sie häufig verwendete Adressen an, um sie über die Suche schneller aufzurufen.</string>
+    <string name="remove_location">Ort entfernen</string>
+    <string name="remove_this_location">Diesen Ort entfernen?</string>
+    <string name="remove">Entfernen</string>
+    <string name="search_for_a_destination">Nach einem Ziel suchen</string>
+    <string name="navigate_here">Hierhin navigieren</string>
+    <string name="view_route">Route anzeigen</string>
+    <string name="save_this_location_as">Diesen Ort speichern als</string>
+    <string name="add_a_label_for_quick_access">Fügen Sie ein Label für den Schnellzugriff hinzu.</string>
+    <string name="saved">Gespeichert</string>
+    <string name="start_navigation">Navigation starten</string>
+    <string name="calculating_route">Route wird berechnet…</string>
+    <string name="device_disconnected_ncheck_the_connection">Gerät getrennt. \nPrüfen Sie die Verbindung.</string>
+    <string name="set_location_access_to_always_allow">Stellen Sie den Standortzugriff auf "Immer zulassen".</string>
+    <string name="you_ve_arrived_at_your_destination">Sie haben Ihr Ziel erreicht.</string>
+    <string name="thanks_for_choosing_drivona">Vielen Dank, dass Sie sich für DRIVONA entschieden haben.</string>
+    <string name="how_was_your">Wie war Ihre Erfahrung? Teilen Sie uns Ihr Feedback mit.</string>
+    <string name="give_feedback">Feedback geben</string>
+    <string name="connected">Verbunden</string>
+    <string name="no_routes_available_right_now">Derzeit sind keine Routen verfügbar</string>
+    <string name="end_navigation">Navigation beenden</string>
+    <string name="end_navigation_">Navigation beenden?</string>
+    <string name="end">Beenden</string>
+    <string name="continue_navigation">Navigation fortsetzen</string>
+    <string name="account">Konto</string>
+    <string name="system">System</string>
+    <string name="feedback">Feedback</string>
+    <string name="privacy_policy_">Datenschutzrichtlinie</string>
+    <string name="quick_start">Schnellstart</string>
+    <string name="view_quick_tutorials_and_learn">Sehen Sie sich die Kurzanleitungen an und lernen Sie die Grundlagen der Navigation.</string>
+    <string name="distance_unit">Entfernungseinheit</string>
+    <string name="speed_unit">Geschwindigkeitseinheit</string>
+    <string name="language">Sprache</string>
+    <string name="software_update">Software-Update</string>
+    <string name="edit_profile">Profil bearbeiten</string>
+    <string name="log_out">Abmelden</string>
+    <string name="log_out_of_this_account">Von diesem Konto abmelden?</string>
+    <string name="manage_email_address">E-Mail-Adresse verwalten</string>
+    <string name="this_email_is_linked_to_your">Diese E-Mail-Adresse ist mit Ihrem Konto verknüpft und wird zur Anmeldung verwendet.</string>
+    <string name="want_to_change_it">Möchten Sie sie ändern?</string>
+    <string name="tap_the_button_below">Tippen Sie auf die Schaltfläche unten.</string>
+    <string name="delete_account">Konto löschen</string>
+    <string name="delete_your_account">Konto löschen?</string>
+    <string name="deleting_your_account_permanently_removes">Durch das Löschen Ihres Kontos werden Ihre persönlichen Daten dauerhaft entfernt. Dieser Vorgang kann nicht rückgängig gemacht werden.</string>
+    <string name="delete">Delete</string>
+    <string name="change_password">Passwort ändern</string>
+    <string name="enter_your_current_password">Geben Sie Ihr aktuelles Passwort ein.</string>
+    <string name="current_password">Aktuelles Passwort</string>
+    <string name="new_password">Neues Passwort</string>
+    <string name="password_changed">Passwort geändert</string>
+    <string name="you_can_now_sign_in_with_your_new_password">Sie können sich jetzt mit Ihrem neuen Passwort anmelden.</string>
+    <string name="help_us_improve">Helfen Sie uns, besser zu werden</string>
+    <string name="your_feedback_helps_us_improve">Ihr Feedback hilft uns, das DRIVONA-Erlebnis weiter zu verbessern.</string>
+    <string name="what_would_you_like_to_share">Was möchten Sie uns mitteilen?</string>
+    <string name="name">Name</string>
+    <string name="enter_your_email_address">E-Mail-Adresse eingeben</string>
+    <string name="describe_your_issue_or_suggestion_include_your">Beschreiben Sie Ihr Problem oder Ihren Vorschlag (geben Sie bei Bedarf Ihre Bestellnummer an).</string>
+    <string name="send">Senden</string>
+    <string name="we_ve_sent_a_4_digit_verification_code_to">Wir haben einen 4-stelligen Bestätigungscode an Ihre E-Mail-Adresse gesendet. Geben Sie ihn unten ein.</string>
+    <string name="no_devices_found">Keine Geräte gefunden</string>
+    <string name="search_again">Erneut suchen</string>
+    <string name="hi_user">Hallo, Nutzer</string>
+    <string name="not_set1">Nicht gesetzt</string>
+    <string name="starting_point">Startpunkt</string>
+    <string name="delete_device">Gerät löschen</string>
+    <string name="confirm_delete_device">Gerät wirklich löschen?</string>
+    <string name="incorrect_verification_code">Falscher Verifizierungscode</string>
+    <string name="passwords_do_not_match">Passwörter stimmen nicht überein</string>
+    <string name="forgot_password">Passwort vergessen</string>
+    <string name="create_a_secure_password_that">Erstellen Sie ein sicheres Passwort, das Sie sich gut merken können.</string>
+    <string name="device_settings_area">Geräteeinstellungsbereich</string>
+    <string name="this_box_displays_the_device">Dieses Feld zeigt den Verbindungsstatus des Geräts sowie dessen Akkustand und Namen an.</string>
+    <string name="product_manual">Produkt-Tutorial</string>
+    <string name="maps">Karten</string>
+
+
+</resources>

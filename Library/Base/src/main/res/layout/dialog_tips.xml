@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginStart="38dp"
+    android:layout_marginEnd="38dp"
+    android:background="@drawable/shape_e2f7ff_eff1ff"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:text="温馨提示"
+        android:visibility="gone"
+        android:textColor="#666666"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="30dp"
+        android:textColor="#666666"
+        android:textSize="14sp"
+        android:gravity="center"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#f8f8f8"
+        android:visibility="gone"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="33dp"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/cancel_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="取消"
+            android:paddingVertical="3dp"
+            android:background="@drawable/shape_fffb41f_360radius"
+            android:paddingHorizontal="22dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_13" />
+
+        <ImageView
+            android:id="@+id/line"
+            android:layout_width="1dp"
+            android:visibility="gone"
+            android:layout_height="match_parent"
+            android:background="#f8f8f8" />
+
+        <TextView
+            android:id="@+id/sure_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="确定"
+            android:layout_marginStart="54dp"
+            android:paddingVertical="3dp"
+            android:paddingHorizontal="22dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/shape_4scfff_360radius"
+            android:textSize="@dimen/font_13" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</LinearLayout>

@@ -1,0 +1,39 @@
+apply plugin: 'com.android.library'
+apply plugin: 'maven-publish'
+apply plugin: 'signing'
+apply plugin: 'org.jetbrains.kotlin.android'
+apply plugin: 'kotlin-kapt'
+
+version = '2.2.2'
+
+android {
+    compileSdkVersion 30
+    namespace "com.youth.banner"
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 30
+        consumerProguardFiles 'proguard-rules.pro'
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_18
+        targetCompatibility JavaVersion.VERSION_18
+    }
+}
+
+dependencies {
+    implementation "androidx.viewpager2:viewpager2:1.1.0-alpha01"
+}
+
+task androidSourcesJar(type: Jar) {
+    archiveClassifier.set("sources")
+    from android.sourceSets.main.java.source
+    exclude "**/R.class"
+    exclude "**/BuildConfig.class"
+}
+

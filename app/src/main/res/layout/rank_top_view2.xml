@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/header2"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="18dp"
+        app:layout_constraintEnd_toStartOf="@+id/header1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearance="@style/CircleStyle" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/header1"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearance="@style/CircleStyle" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/header3"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/header1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearance="@style/CircleStyle" />
+
+    <ImageView
+        android:id="@+id/avatar_frame1"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        app:layout_constraintBottom_toBottomOf="@+id/header1"
+        app:layout_constraintEnd_toEndOf="@+id/header1"
+        app:layout_constraintStart_toStartOf="@+id/header1"
+        app:layout_constraintTop_toTopOf="@+id/header1" />
+
+    <ImageView
+        android:id="@+id/imageView41"
+        android:layout_width="43dp"
+        android:layout_height="43dp"
+        android:layout_marginBottom="-20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/header1"
+        app:layout_constraintEnd_toEndOf="@+id/avatar_frame1"
+        app:layout_constraintStart_toStartOf="@+id/avatar_frame1" />
+
+    <ImageView
+        android:id="@+id/imageView42"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        app:layout_constraintBottom_toBottomOf="@+id/header2"
+        app:layout_constraintEnd_toEndOf="@+id/header2"
+        app:layout_constraintStart_toStartOf="@+id/header2"
+        app:layout_constraintTop_toTopOf="@+id/header2" />
+
+    <ImageView
+        android:id="@+id/imageView43"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-3dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView42"
+        app:layout_constraintEnd_toEndOf="@+id/imageView42"
+        app:layout_constraintStart_toStartOf="@+id/imageView42" />
+
+    <ImageView
+        android:id="@+id/imageView44"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        app:layout_constraintBottom_toBottomOf="@+id/header3"
+        app:layout_constraintEnd_toEndOf="@+id/header3"
+        app:layout_constraintStart_toStartOf="@+id/header3"
+        app:layout_constraintTop_toTopOf="@+id/header3" />
+
+    <ImageView
+        android:id="@+id/imageView45"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-3dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView44"
+        app:layout_constraintEnd_toEndOf="@+id/imageView44"
+        app:layout_constraintStart_toStartOf="@+id/imageView44" />
+
+    <TextView
+        android:id="@+id/name1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="虚位以待"
+        android:textColor="#ff333333"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/avatar_frame1"
+        app:layout_constraintStart_toStartOf="@+id/avatar_frame1"
+        app:layout_constraintTop_toBottomOf="@+id/imageView41" />
+
+    <TextView
+        android:id="@+id/name2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="虚位以待"
+        android:textColor="#ff333333"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView42"
+        app:layout_constraintStart_toStartOf="@+id/imageView42"
+        app:layout_constraintTop_toBottomOf="@+id/imageView43" />
+
+    <TextView
+        android:id="@+id/name3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="虚位以待"
+        android:textColor="#ff333333"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView44"
+        app:layout_constraintStart_toStartOf="@+id/imageView44"
+        app:layout_constraintTop_toBottomOf="@+id/imageView45" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/medal1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/name1"
+        app:layout_constraintStart_toStartOf="@+id/name1"
+        app:layout_constraintTop_toBottomOf="@+id/name1" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/medal2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/name2"
+        app:layout_constraintStart_toStartOf="@+id/name2"
+        app:layout_constraintTop_toBottomOf="@+id/name2" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/medal3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/name3"
+        app:layout_constraintStart_toStartOf="@+id/name3"
+        app:layout_constraintTop_toBottomOf="@+id/name3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

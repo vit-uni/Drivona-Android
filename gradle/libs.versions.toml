@@ -1,0 +1,96 @@
+[versions]
+agp = "8.1.1"
+kotlin = "2.1.0"
+leanback = "1.0.0"
+glide = "4.11.0"
+recyclerview = "1.0.0"
+resolverConvention = "0.4.0"
+bintray-release = "0.9.2"
+baserecyclerviewadapterhelper = "3.0.14"
+constraintlayout = "2.1.3"
+autosize = "v1.2.1"
+appcompat = "1.6.1"
+material = "1.8.0"
+lifecycle = "2.3.1"
+ktorm-core = "3.6.0"
+crashsight-android = "4.2.14"
+rxpay = "2.2.2"
+rxpay-compiler = "2.1.1"
+floatWindow = "1.0.9"
+voicerecorder = "1.0.2"
+banner = "2.1.0"
+androidx-car = "1.9.0-alpha01"
+nmcp = "1.5.0"
+roborazzi = "1.64.0"
+
+cardview = "1.0.0"
+dotsindicator = "5.1.1"
+espressoCore = "3.7.0"
+coreKtx = "1.15.0"
+junit = "4.13.2"
+composeBom = "2026.05.01"
+dynamicAnimation = "1.1.0"
+runner = "1.7.0"
+viewpager2 = "1.1.0"
+activityCompose = "1.13.0"
+mavenPublish = "0.36.0"
+robolectric = "4.16.1"
+[libraries]
+
+androidx-car-app = { module = "androidx.car.app:app", version.ref = "androidx-car" }
+androidx-app-automotive = { module = "androidx.car.app:app-automotive", version.ref = "androidx-car" }
+androidx-app-projected = { module = "androidx.car.app:app-projected", version.ref = "androidx-car" }
+
+leanback = { group = "androidx.leanback", name = "leanback", version.ref = "leanback" }
+glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
+recyclerview = { group = "androidx.recyclerview", name = "recyclerview", version.ref = "recyclerview" }
+constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+baserecyclerviewadapterhelper = { group = "io.github.cymchad", name = "BaseRecyclerViewAdapterHelper", version.ref = "baserecyclerviewadapterhelper" }
+autosize = { group = "com.github.JessYanCoding", name = "AndroidAutoSize", version.ref = "autosize" }
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+lifecycle = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "lifecycle" }
+lifecycleViewmodel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel", version.ref = "lifecycle" }
+lifecycleViewmodelSavedstate = { group = "androidx.lifecycle", name = "llifecycle-viewmodel-savedstate", version.ref = "lifecycle" }
+lifecycleCommonJava8 = { group = "androidx.lifecycle", name = "lifecycle-common-java8", version.ref = "lifecycle" }
+ktormCore = { group = "org.ktorm", name = "ktorm-core", version.ref = "ktorm-core" }
+crashsightandroid = { group = "net.crashsight", name = "crashsight-android", version.ref = "crashsight-android" }
+rxpay = { group = "com.cuieney", name = "rxpay-api", version.ref = "rxpay" }
+rxpayCompiler = { group = "com.cuieney", name = "rxpay-compiler", version.ref = "rxpay-compiler" }
+floatWindow = { group = "com.github.yhaolpz", name = "FloatWindow", version.ref = "floatWindow" }
+voicerecorder = { group = "com.ilike", name = "voicerecorder", version.ref = "voicerecorder" }
+banner = { group = "com.youth.banner", name = "banner", version.ref = "banner" }
+
+androidx-cardview = { module = "androidx.cardview:cardview", version.ref = "cardview" }
+androidx-constraintlayout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "constraintlayout" }
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-espresso-core = { module = "androidx.test.espresso:espresso-core", version.ref = "espressoCore" }
+androidx-runner = { module = "androidx.test:runner", version.ref = "runner" }
+androidx-viewpager2 = { module = "androidx.viewpager2:viewpager2", version.ref = "viewpager2" }
+dotsindicator = { module = "com.tbuonomo:dotsindicator", version.ref = "dotsindicator" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+androidx-ui = { group = "androidx.compose.ui", name = "ui" }
+androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
+androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
+androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+androidx-dynamic-animation = { group = "androidx.dynamicanimation", name = "dynamicanimation", version.ref = "dynamicAnimation" }
+roborazzi = { module = "io.github.takahirom.roborazzi:roborazzi", version.ref = "roborazzi" }
+roborazzi-compose = { module = "io.github.takahirom.roborazzi:roborazzi-compose", version.ref = "roborazzi" }
+roborazzi-junit-rule = { module = "io.github.takahirom.roborazzi:roborazzi-junit-rule", version.ref = "roborazzi" }
+robolectric = { module = "org.robolectric:robolectric", version.ref = "robolectric" }
+androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+[plugins]
+roborazzi = { id = "io.github.takahirom.roborazzi", version.ref = "roborazzi" }
+nmcp = { id = "com.gradleup.nmcp", version.ref = "nmcp" }
+androidApplication = { id = "com.android.application", version.ref = "agp" }
+android-library = { id = "com.android.library" }
+kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+resolverConvention = { id = "org.gradle.toolchains.foojay-resolver-convention", version.ref = "resolverConvention" }
+jetbrains-kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+[bundles]
+

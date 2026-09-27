@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".ui.activity.login.LoginActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_map_main_bg" />
+
+    <com.drivona.speed.widght.StatusBarView
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:sbv_single_state="true" />
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="20dp"
+        android:src="@mipmap/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_bar" />
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_edit_avatart_logo"
+        app:layout_constraintStart_toStartOf="@id/iv_back"
+        app:layout_constraintTop_toBottomOf="@id/iv_back" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/maps"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_icon"
+        app:layout_constraintStart_toEndOf="@id/iv_icon" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.hjq.shape.view.ShapeTextView
+            android:id="@+id/tv_search"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:layout_marginHorizontal="17dp"
+            android:layout_marginBottom="80dp"
+            android:drawableStart="@drawable/ic_map_search_icon"
+            android:drawablePadding="20dp"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="20dp"
+            android:text="@string/search"
+            android:textColor="#A2A2A2"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:shape_radius="13dp"
+            app:shape_solidColor="#1AFFFFFF" />
+
+        <com.hjq.shape.view.ShapeTextView
+            android:id="@+id/tv_search_0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="17dp"
+            android:layout_marginBottom="45dp"
+            android:drawablePadding="20dp"
+            android:gravity="center_vertical"
+            android:text="@string/where_to"
+            android:textColor="@color/white90"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@id/tv_search" />
+
+
+        <com.hjq.shape.view.ShapeTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="17dp"
+            android:layout_marginBottom="10dp"
+            android:drawableStart="@drawable/ic_map_mian_location"
+            android:drawablePadding="3dp"
+            android:gravity="center_vertical"
+            android:text="@string/hi_user"
+            android:textColor="@color/white90"
+            android:textSize="21sp"
+            app:layout_constraintBottom_toTopOf="@id/tv_search_0" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_connect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.hjq.shape.view.ShapeTextView
+            android:id="@+id/tv_connect"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="@string/connect_device"
+            android:textColor="@color/white90"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:shape_radius="13dp"
+            app:shape_solidColor="#003CB3" />
+
+        <com.hjq.shape.view.ShapeTextView
+            android:id="@+id/tv_connect_0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="17dp"
+            android:layout_marginBottom="45dp"
+
+            android:gravity="center_vertical"
+            android:text="@string/map_services_are_available_only_when"
+            android:textColor="@color/white90"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toTopOf="@id/tv_connect" />
+
+
+        <com.hjq.shape.view.ShapeTextView
+            android:id="@+id/tv_connect_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="17dp"
+            android:layout_marginBottom="10dp"
+
+            android:gravity="center_vertical"
+            android:text="@string/connect_a_device_to_continue"
+            android:textColor="@color/white90"
+            android:textSize="26sp"
+            app:layout_constraintBottom_toTopOf="@id/tv_connect_0" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="42dp"
+            android:src="@drawable/ic_map_connect"
+            app:layout_constraintBottom_toTopOf="@id/tv_connect_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.hjq.shape.view.ShapeTextView
+            android:id="@+id/tv_location"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="@string/open_settings"
+            android:textColor="@color/white90"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:shape_radius="13dp"
+            app:shape_solidColor="#003CB3" />
+
+        <com.hjq.shape.view.ShapeTextView
+            android:id="@+id/tv_location_0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="17dp"
+            android:layout_marginBottom="45dp"
+
+            android:gravity="center_vertical"
+            android:text="@string/map_services_need_access_to"
+            android:textColor="@color/white90"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toTopOf="@id/tv_location" />
+
+
+        <com.hjq.shape.view.ShapeTextView
+            android:id="@+id/tv_location_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="17dp"
+            android:layout_marginBottom="10dp"
+
+            android:gravity="center_vertical"
+            android:text="@string/please_turn_on_location_services"
+            android:textColor="@color/white90"
+            android:textSize="26sp"
+            app:layout_constraintBottom_toTopOf="@id/tv_location_0" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="42dp"
+            android:src="@drawable/ic_map_discovery"
+            app:layout_constraintBottom_toTopOf="@id/tv_location_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_ble"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.hjq.shape.view.ShapeTextView
+            android:id="@+id/tv_ble"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="@string/open_settings"
+            android:textColor="@color/white90"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:shape_radius="13dp"
+            app:shape_solidColor="#003CB3" />
+
+        <com.hjq.shape.view.ShapeTextView
+            android:id="@+id/tv_ble_0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="17dp"
+            android:layout_marginBottom="45dp"
+
+            android:gravity="center_vertical"
+            android:text="@string/map_services_require_a_continuous"
+            android:textColor="@color/white90"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toTopOf="@id/tv_ble" />
+
+
+        <com.hjq.shape.view.ShapeTextView
+            android:id="@+id/tv_ble_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="17dp"
+            android:layout_marginBottom="10dp"
+
+            android:gravity="center_vertical"
+            android:text="@string/turn_on_wireless_connection_on_your_phone"
+            android:textColor="@color/white90"
+            android:textSize="26sp"
+            app:layout_constraintBottom_toTopOf="@id/tv_ble_0" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="42dp"
+            android:src="@drawable/ic_map_ble"
+            app:layout_constraintBottom_toTopOf="@id/tv_ble_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

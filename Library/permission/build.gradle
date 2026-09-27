@@ -1,0 +1,80 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    alias(libs.plugins.kotlinAndroid)
+    id 'kotlin-kapt'
+}
+android {
+    compileSdkVersion 34
+    namespace "com.hjq.permissions"
+
+    defaultConfig {
+        minSdkVersion 14
+    }
+
+    // 使用 JDK 1.8
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_18
+        sourceCompatibility JavaVersion.VERSION_18
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    android.libraryVariants.configureEach { variant ->
+        // aar 输出文件名配置
+        variant.outputs.configureEach { output ->
+            outputFileName = "${rootProject.name}-${android.defaultConfig.versionName}.aar"
+        }
+    }
+
+    packagingOptions {
+        // 剔除这个包下的所有文件（不会移除签名信息）
+        exclude 'META-INF/*******'
+    }
+}
+
+//afterEvaluate {
+//    // 排除 BuildConfig.class 和 R.class
+//    generateReleaseBuildConfig.enabled = false
+//    generateDebugBuildConfig.enabled = false
+//    generateReleaseResValues.enabled = false
+//    generateDebugResValues.enabled = false
+//}
+
+dependencies {
+    // noinspection GradleCompatible
+    implementation "androidx.core:core-ktx:1.7.0"
+    implementation android_ui.appcompat
+    compileOnly "com.blankj:utilcode:1.30.7"
+}
+
+//tasks.withType(Javadoc).configureEach {
+//    // prevent Javadoc from failing gradle build：https://stackoverflow.com/questions/35435173/prevent-javadoc-from-failing-gradle-build
+//    failOnError false
+//    options.addStringOption('Xdoclint:none', '-quiet')
+//    options.addStringOption('encoding', 'UTF-8')
+//    options.addStringOption('charSet', 'UTF-8')
+//}
+
+//tasks.register('sourcesJar', Jar) {
+//    from android.sourceSets.main.java.srcDirs
+//    classifier = 'sources'
+//}
+
+//tasks.register('javadoc', Javadoc) {
+//    source = android.sourceSets.main.java.srcDirs
+//    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+//}
+
+//tasks.register('javadocJar', Jar) {
+//    dependsOn javadoc
+//    classifier = 'javadoc'
+//    from javadoc.destinationDir
+//}
+
+//artifacts {
+//    archives javadocJar
+//    archives sourcesJar
+//}

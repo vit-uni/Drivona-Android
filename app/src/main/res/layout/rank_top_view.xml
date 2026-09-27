@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/head1"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hg1"
+        app:shapeAppearance="@style/CircleStyle" />
+
+    <ImageView
+        android:id="@+id/head_bord1"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        app:layout_constraintStart_toStartOf="@+id/head1"
+        app:layout_constraintTop_toTopOf="@+id/head1"
+        app:layout_constraintEnd_toEndOf="@+id/head1"
+        app:layout_constraintBottom_toBottomOf="@+id/head1"/>
+
+    <TextView
+        android:id="@+id/name1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:paddingVertical="5dp"
+        android:singleLine="true"
+        android:text="暂无上榜"
+        android:textColor="@color/black"
+        android:textSize="@dimen/size12"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@id/head1"
+        app:layout_constraintStart_toStartOf="@id/head1"
+        app:layout_constraintTop_toBottomOf="@id/head1" />
+
+    <TextView
+        android:id="@+id/hc1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="0"
+        android:textSize="@dimen/size10"
+        app:layout_constraintEnd_toEndOf="@id/head1"
+        app:layout_constraintStart_toStartOf="@id/head1"
+        app:layout_constraintTop_toBottomOf="@id/name1" />
+
+    <TextView
+        android:id="@+id/tip1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_login"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:paddingVertical="5dp"
+        android:singleLine="true"
+        android:text="等级"
+        android:visibility="gone"
+        android:textColor="@color/white"
+        android:textSize="@dimen/size12"
+        app:layout_constraintEnd_toEndOf="@id/head1"
+        app:layout_constraintStart_toStartOf="@id/head1"
+        app:layout_constraintTop_toBottomOf="@id/name1" />
+
+    <ImageView
+        android:id="@+id/hg1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/name2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:paddingVertical="5dp"
+        android:layout_marginTop="8dp"
+        android:singleLine="true"
+        android:text="暂无上榜"
+        android:textColor="@color/black"
+        android:textSize="@dimen/size12"
+        app:layout_constraintEnd_toEndOf="@id/head2"
+        app:layout_constraintStart_toStartOf="@id/head2"
+        app:layout_constraintTop_toBottomOf="@id/head2" />
+
+    <TextView
+        android:id="@+id/tip2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_login"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:paddingVertical="5dp"
+        android:singleLine="true"
+        android:text="等级"
+        android:visibility="gone"
+        android:textColor="@color/white"
+        android:textSize="@dimen/size12"
+        app:layout_constraintEnd_toEndOf="@id/head2"
+        app:layout_constraintStart_toStartOf="@id/head2"
+        app:layout_constraintTop_toBottomOf="@id/name2" />
+
+    <TextView
+        android:id="@+id/jl2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:paddingVertical="5dp"
+        android:singleLine="true"
+        android:text="距前一名还差"
+        android:textColor="@color/black"
+        android:textSize="@dimen/size10"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/head2"
+        app:layout_constraintStart_toStartOf="@id/head2"
+        app:layout_constraintTop_toBottomOf="@id/tip2" />
+
+    <TextView
+        android:id="@+id/hc2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="0"
+        android:textSize="@dimen/size10"
+        app:layout_constraintEnd_toEndOf="@id/head2"
+        app:layout_constraintStart_toStartOf="@id/head2"
+        app:layout_constraintTop_toBottomOf="@id/jl2" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/head2"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toStartOf="@id/head1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hg2"
+        app:shapeAppearance="@style/CircleStyle" />
+
+    <ImageView
+        android:id="@+id/head_bord2"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:layout_constraintStart_toStartOf="@+id/head2"
+        app:layout_constraintEnd_toEndOf="@+id/head2"
+        app:layout_constraintTop_toTopOf="@+id/head2"
+        app:layout_constraintBottom_toBottomOf="@+id/head2"/>
+
+    <ImageView
+        android:id="@+id/hg2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="@id/head2"
+        app:layout_constraintStart_toStartOf="@+id/head2"
+        app:layout_constraintTop_toBottomOf="@+id/hg1" />
+
+    <TextView
+        android:id="@+id/name3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:paddingVertical="5dp"
+        android:singleLine="true"
+        android:text="暂无上榜"
+        android:textColor="@color/black"
+        android:textSize="@dimen/size12"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@id/head3"
+        app:layout_constraintStart_toStartOf="@id/head3"
+        app:layout_constraintTop_toBottomOf="@id/head3" />
+
+    <TextView
+        android:id="@+id/tip3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_login"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:paddingVertical="5dp"
+        android:singleLine="true"
+        android:text="等级"
+        android:textColor="@color/white"
+        android:textSize="@dimen/size12"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/head3"
+        app:layout_constraintStart_toStartOf="@id/head3"
+        app:layout_constraintTop_toBottomOf="@id/name3" />
+
+    <TextView
+        android:id="@+id/jl3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:paddingVertical="5dp"
+        android:singleLine="true"
+        android:text="距前一名还差"
+        android:textColor="@color/black"
+        android:textSize="@dimen/size10"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/head3"
+        app:layout_constraintStart_toStartOf="@id/head3"
+        app:layout_constraintTop_toBottomOf="@id/tip3" />
+
+    <TextView
+        android:id="@+id/hc3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="0"
+        android:textSize="@dimen/size10"
+        app:layout_constraintEnd_toEndOf="@id/head3"
+        app:layout_constraintStart_toStartOf="@id/head3"
+        app:layout_constraintTop_toBottomOf="@id/jl3" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/head3"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/head1"
+        app:layout_constraintTop_toBottomOf="@+id/hg3"
+        app:shapeAppearance="@style/CircleStyle" />
+
+    <ImageView
+        android:id="@+id/head_bord3"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:layout_constraintStart_toStartOf="@+id/head3"
+        app:layout_constraintEnd_toEndOf="@+id/head3"
+        app:layout_constraintTop_toTopOf="@+id/head3"
+        app:layout_constraintBottom_toBottomOf="@+id/head3"/>
+
+    <ImageView
+        android:id="@+id/hg3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="@id/head3"
+        app:layout_constraintStart_toStartOf="@id/head3"
+        app:layout_constraintTop_toBottomOf="@+id/hg1" />
+
+    <ImageView
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="33dp"
+        app:layout_constraintEnd_toEndOf="@+id/head2"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="@+id/head2"
+        app:layout_constraintTop_toTopOf="@+id/head2" />
+
+    <ImageView
+        android:id="@+id/imageView41"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="-26dp"
+        app:layout_constraintBottom_toBottomOf="@+id/head1"
+        app:layout_constraintEnd_toEndOf="@+id/head1"
+        app:layout_constraintStart_toStartOf="@+id/head1" />
+
+    <ImageView
+        android:id="@+id/imageView45"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/head3"
+        app:layout_constraintEnd_toEndOf="@+id/head3"
+        app:layout_constraintStart_toStartOf="@+id/head3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

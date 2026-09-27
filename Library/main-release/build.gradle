@@ -1,0 +1,2 @@
+configurations.maybeCreate("default")
+artifacts.add("default", file("main-2.1.6-release.aar"))

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- background：整张圆形图标，直接铺满桌面蒙版，和Spotify一样 -->
+    <background android:drawable="@drawable/ic_logo"/>
+    <!-- foreground：透明占位矢量图 -->
+    <foreground android:drawable="@drawable/bg_tran"/>
+</adaptive-icon>

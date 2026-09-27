@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".ui.activity.login.LoginActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_welcome_bg" />
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:src="@drawable/ic_edit_avatart_logo"
+        app:layout_constraintBottom_toTopOf="@id/tv_desc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.drivona.speed.widght.StatusBarView
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:sbv_single_state="true" />
+
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="4dp"
+        android:layout_height="0dp"
+        android:layout_marginVertical="4dp"
+        android:background="@drawable/bg_dot_line"
+        app:layout_constraintBottom_toBottomOf="@id/tv_success_desc"
+        app:layout_constraintStart_toStartOf="@id/tv_connect"
+        app:layout_constraintTop_toTopOf="@id/tv_success_desc" />
+
+    <TextView
+        android:id="@+id/tv_success_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="34dp"
+        android:text="@string/registration_complete_welcome_to_drivona_tap_below_for_a_quick_tour"
+        android:textColor="@color/white"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toTopOf="@id/tv_connect"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/view_line" />
+
+    <TextView
+        android:id="@+id/tv_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="17dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginBottom="14dp"
+        android:text="@string/welcome_to_drivona_your_smart_driving_companion"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@id/tv_success_desc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_connect"
+        android:layout_width="0dp"
+        android:layout_height="47dp"
+        android:layout_marginHorizontal="17dp"
+        android:layout_marginBottom="34dp"
+        android:background="@drawable/bg_login_btn_16"
+        android:gravity="center"
+        android:text="@string/get_started"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

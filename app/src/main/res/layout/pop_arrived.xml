@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.hjq.shape.layout.ShapeConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cl_pop_arrived"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_device_night_mode"
+    app:shape_solidColor="#030C17"
+    app:shape_topLeftRadius="13dp"
+    app:shape_topRightRadius="13dp">
+
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="38dp"
+        android:src="@drawable/ic_loacation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_0"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/you_ve_arrived_at_your_destination"
+        android:textColor="@color/white90"
+        android:textSize="21sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_icon" />
+
+
+    <TextView
+        android:id="@+id/tv_1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="17dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/thanks_for_choosing_drivona"
+        android:textColor="@color/white90"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_0" />
+
+    <TextView
+        android:id="@+id/tv_2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="17dp"
+        android:layout_marginTop="58dp"
+        android:text="@string/how_was_your"
+        android:textColor="@color/white90"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_1" />
+
+    <com.hjq.shape.view.ShapeTextView
+        android:id="@+id/tv_feedback"
+        android:layout_width="0dp"
+        android:layout_height="47dp"
+        android:layout_marginHorizontal="17dp"
+        android:layout_marginTop="18dp"
+
+        android:gravity="center"
+        android:text="@string/give_feedback"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_2"
+        app:shape_radius="13dp"
+        app:shape_strokeColor="@color/theme_color"
+        app:shape_strokeWidth="1dp" />
+
+    <com.hjq.shape.view.ShapeTextView
+        android:id="@+id/tv_done"
+        android:layout_width="0dp"
+        android:layout_height="47dp"
+        android:layout_marginHorizontal="17dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="50dp"
+        android:gravity="center"
+        android:text="@string/done"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_feedback"
+        app:shape_radius="13dp"
+        app:shape_solidColor="@color/theme_color" />
+
+
+</com.hjq.shape.layout.ShapeConstraintLayout>

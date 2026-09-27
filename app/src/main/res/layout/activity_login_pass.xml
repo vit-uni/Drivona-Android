@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".ui.activity.login.LoginActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_splash_bg" />
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/start_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/t1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/t1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+
+        android:text="@string/login"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        app:layout_constraintTop_toBottomOf="@id/iv_logo"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/etPhone" />
+
+
+
+
+    <EditText
+        android:id="@+id/etPhone"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="11dp"
+        android:background="@drawable/bg_login_input"
+        android:hint="@string/email"
+        android:paddingHorizontal="15dp"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textColorHint="#919191"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/etCode"
+        app:layout_constraintEnd_toEndOf="@id/line"
+        app:layout_constraintStart_toStartOf="@id/line" />
+
+
+    <EditText
+        android:id="@+id/etCode"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/select_password_input_bg"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:paddingHorizontal="15dp"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textColorHint="#919191"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/forgot_password"
+        app:layout_constraintEnd_toEndOf="@id/line"
+        app:layout_constraintStart_toStartOf="@id/line"
+        app:layout_goneMarginEnd="20dp" />
+
+    <ImageView
+        android:id="@+id/ic_eye_new"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:padding="10dp"
+        android:src="@drawable/select_password_eye"
+        app:layout_constraintBottom_toBottomOf="@id/etCode"
+        app:layout_constraintEnd_toEndOf="@id/etCode"
+        app:layout_constraintTop_toTopOf="@id/etCode" />
+
+    <TextView
+        android:id="@+id/tv_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:text="Password error"
+        android:textColor="#ffff6464"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/etCode"
+        app:layout_constraintEnd_toStartOf="@id/ic_eye_new"
+        app:layout_constraintTop_toTopOf="@id/etCode" />
+
+    <TextView
+        android:id="@+id/forgot_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="@string/forgotten_password"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@id/line"
+
+        app:layout_constraintStart_toStartOf="@id/etCode" />
+
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="30dp"
+        android:background="@color/color_line"
+        app:layout_constraintBottom_toTopOf="@id/login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginHorizontal="20dp"
+
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/selector_login_btn"
+        android:gravity="center"
+        android:text="@string/login"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/tv_create" />
+
+    <TextView
+        android:id="@+id/tv_create"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:paddingStart="10dp"
+        android:text="@string/create_an_account"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/agree_btn"
+        app:layout_constraintEnd_toEndOf="@id/line"
+        app:layout_constraintStart_toStartOf="@id/line" />
+
+
+    <ImageView
+        android:id="@+id/iv_agree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/selector_agree"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/agree_btn" />
+
+    <TextView
+        android:id="@+id/agree_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="20dp"
+        android:paddingVertical="5dp"
+        android:layout_marginBottom="80dp"
+        android:text="I agree to the user agreement and privacy agreement of this product"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iv_agree" />
+</androidx.constraintlayout.widget.ConstraintLayout>

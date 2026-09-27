@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.hjq.shape.layout.ShapeConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/pop_delete_confirm"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:shape_solidColor="#091938"
+
+    android:paddingBottom="10dp"
+    app:shape_topLeftRadius="13dp"
+    app:shape_topRightRadius="13dp">
+
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/ic_delete_confirm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_0"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Delete location"
+        android:textColor="@color/white90"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_icon" />
+
+
+    <TextView
+        android:id="@+id/tv_1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="17dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="Are you sure you want to delete this location?"
+        android:textColor="@color/white90"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_0" />
+
+
+    <com.hjq.shape.view.ShapeTextView
+        android:id="@+id/tv_done"
+        android:layout_width="0dp"
+        android:layout_height="47dp"
+        android:layout_marginHorizontal="17dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="@string/cancel"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_1"
+        app:shape_radius="13dp"
+        app:shape_solidColor="@color/theme_color" />
+    <com.hjq.shape.view.ShapeTextView
+        android:id="@+id/tv_cancel"
+        android:layout_width="0dp"
+        android:layout_height="47dp"
+        android:layout_marginHorizontal="17dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="@string/remove"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_done"  />
+
+
+</com.hjq.shape.layout.ShapeConstraintLayout>
