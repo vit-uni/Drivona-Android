@@ -515,6 +515,7 @@ class SearchMapActivity : BaseActivity<ActivitySearchMapBinding>(),
                     val lat = SPUtils.getInstance().getFloat("lat")
                     val lng = SPUtils.getInstance().getFloat("lng")
                     if (lat != 0f) {
+                        // debug 模式模拟导航
                         if (BuildConfig.DEBUG) {
                             navigator.simulator.setUserLocation(
                                 LatLng(
@@ -720,8 +721,7 @@ class SearchMapActivity : BaseActivity<ActivitySearchMapBinding>(),
 
 
     /**
-     * Requests directions from the user's current location to a specific place (provided by the
-     * Google Places API).
+     * 没有选择路线，默认路线
      */
     private fun navigateToPlace() {
 
@@ -758,6 +758,7 @@ class SearchMapActivity : BaseActivity<ActivitySearchMapBinding>(),
 
                         // Simulate vehicle progress along the route (for demo/debug builds)
 
+                        // debug 模式模拟导航
                         if (BuildConfig.DEBUG) {
                             navigator.simulator.simulateLocationsAlongExistingRoute(
                                 SimulationOptions().speedMultiplier(2f)
@@ -810,8 +811,7 @@ class SearchMapActivity : BaseActivity<ActivitySearchMapBinding>(),
     }
 
     /**
-     * Requests directions from the user's current location to a specific place (provided by the
-     * Google Places API).
+     * 通过路线到指定地点
      */
     private fun navigateToPlaceByRoute(route: String) {
         Log.e("Route", "route__________${route}")
@@ -869,7 +869,7 @@ class SearchMapActivity : BaseActivity<ActivitySearchMapBinding>(),
                         navigator.setAudioGuidance(Navigator.AudioGuidance.VOICE_ALERTS_AND_GUIDANCE)
 
                         // Simulate vehicle progress along the route (for demo/debug builds)
-
+                        // debug 模式模拟导航
                         if (BuildConfig.DEBUG) {
                             navigator.simulator.simulateLocationsAlongExistingRoute(
                                 SimulationOptions().speedMultiplier(2f)

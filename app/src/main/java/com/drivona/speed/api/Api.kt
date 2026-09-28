@@ -18,39 +18,39 @@ import java.io.File
  * @param path String
  */
 suspend fun CoroutineScope.uploadApi(file: File): String? {
-    return Post<BaseBean<String>>("index/upload") {
+    return Post<BaseBean<String>>(ApiUrl.upload) {
         param("file", file)
     }.await().data!!
 }
 
 
 suspend fun CoroutineScope.getAddressDefaultList(): BaseBean<DefaultLocationData>? {
-    return Post<BaseBean<DefaultLocationData>>("index/address_default_list").await()
+    return Post<BaseBean<DefaultLocationData>>(ApiUrl.addressDefaultList).await()
 }
 suspend fun CoroutineScope.getPublicKey(): BaseBean<String> {
-    return Post<BaseBean<String>>("index/publicKey").await()
+    return Post<BaseBean<String>>(ApiUrl.publicKey).await()
 }
 
 suspend fun CoroutineScope.getAddressList(type: Int): BaseBean<List<LocationData>>? {
-    return Post<BaseBean<List<LocationData>>>("index/address_list") {
+    return Post<BaseBean<List<LocationData>>>(ApiUrl.addressList) {
         param("type", type)
     }.await()
 }
 
 suspend fun CoroutineScope.delAddressList(id: Int): BaseBean<Any>? {
-    return Post<BaseBean<Any>>("index/address_del") {
+    return Post<BaseBean<Any>>(ApiUrl.addressDel) {
         param("id", id)
     }.await()
 }
 suspend fun CoroutineScope.reportNewCamera(latitude: String,longitude:String,event_type:String): BaseBean<Any>? {
-    return Post<BaseBean<Any>>("api/reportNewCamera") {
+    return Post<BaseBean<Any>>(ApiUrl.reportNewCamera) {
         param("latitude", latitude)
         param("longitude", longitude)
         param("event_type", event_type)
     }.await()
 }
 suspend fun CoroutineScope.updateCameraReport(latitude: String,longitude:String,event_id:String,update_type:String): BaseBean<Any>? {
-    return Post<BaseBean<Any>>("api/updateCameraReport") {
+    return Post<BaseBean<Any>>(ApiUrl.updateCameraReport) {
         param("latitude", latitude)
         param("longitude", longitude)
         param("event_id", event_id)
@@ -59,20 +59,20 @@ suspend fun CoroutineScope.updateCameraReport(latitude: String,longitude:String,
 }
 
 suspend fun CoroutineScope.addEquipment(title: String, uuid: String): BaseBean<Any>? {
-    return Post<BaseBean<Any>>("index/equipment_add") {
+    return Post<BaseBean<Any>>(ApiUrl.equipmentAdd) {
         param("title", title)
         param("uuid", uuid)
     }.await()
 }
 
 suspend fun CoroutineScope.checkEquipment(uuid: String): BaseBean<Any>? {
-    return Post<BaseBean<Any>>("index/equipment_check") {
+    return Post<BaseBean<Any>>(ApiUrl.equipmentCheck) {
         param("uuid", uuid)
     }.await()
 }
 
 suspend fun CoroutineScope.delEquipment(id: Int): BaseBean<Any>? {
-    return Post<BaseBean<Any>>("index/equipment_del") {
+    return Post<BaseBean<Any>>(ApiUrl.equipmentDel) {
         param("id", id)
     }.await()
 }
@@ -99,7 +99,7 @@ suspend fun CoroutineScope.setEquipmentInfo(
     alarm_threshold: Int = -1,
     type: Int = -1,
 ): BaseBean<Any>? {
-    return Post<BaseBean<Any>>("index/equipment_init") {
+    return Post<BaseBean<Any>>(ApiUrl.equipmentInit) {
         param("id", id)
         if (title.isNotEmpty()) {
             param("title", title)
@@ -170,7 +170,7 @@ suspend fun CoroutineScope.userEdit(
     speed: String = "",
 
     ): BaseBean<Any>? {
-    return Post<BaseBean<Any>>("index/useredit") {
+    return Post<BaseBean<Any>>(ApiUrl.userEdit) {
 
         if (avatar.isNotEmpty()) {
             param("avatar", avatar)
@@ -189,7 +189,7 @@ suspend fun CoroutineScope.userEdit(
 }
 
 suspend fun CoroutineScope.getEquipmentList(): BaseBean<List<DeviceData>>? {
-    return Post<BaseBean<List<DeviceData>>>("index/equipment_list") {
+    return Post<BaseBean<List<DeviceData>>>(ApiUrl.equipmentList) {
 
     }.await()
 }
@@ -206,7 +206,7 @@ suspend fun CoroutineScope.addressAdd(
     title: String,
     place_id: String,
 ): BaseBean<Any>? {
-    return Post<BaseBean<Any>>("index/address_add") {
+    return Post<BaseBean<Any>>(ApiUrl.addressAdd) {
         param("lat", lat)
         param("long", long)
         param("address", address)
@@ -221,7 +221,7 @@ suspend fun CoroutineScope.addressAdd(
  * @param type 1用户协议2隐私政策3平台规则4信息规范5认证绑定6订单问题7充值提现8成为大神9充值协议10：8元活动，11：买二送一活动，12=“我要上推荐”活动
  */
 suspend fun CoroutineScope.userRule(type: Int = 1): UserRuleBean? {
-    return Post<BaseBean<UserRuleBean>>("user_rule") {
+    return Post<BaseBean<UserRuleBean>>(ApiUrl.userRule) {
         param("type", type)
     }.await().data
 }
@@ -230,7 +230,7 @@ suspend fun CoroutineScope.userRule(type: Int = 1): UserRuleBean? {
  * 注册
  */
 suspend fun CoroutineScope.sign(email: String, code: String, password: String): Any? {
-    return Post<BaseBean<UserRuleBean>>("index/sign") {
+    return Post<BaseBean<UserRuleBean>>(ApiUrl.sign) {
         param("email", email)
         param("code", code)
         param("password", password)
@@ -242,7 +242,7 @@ suspend fun CoroutineScope.sign(email: String, code: String, password: String): 
  * sign注册 forget忘记密码
  */
 suspend fun CoroutineScope.sendMail(email: String, type: String = "sign"): Any? {
-    return Post<BaseBean<Any>>("index/sendMail") {
+    return Post<BaseBean<Any>>(ApiUrl.sendMail) {
         param("email", email)
         param("type", type)
     }.await().data
@@ -252,27 +252,27 @@ suspend fun CoroutineScope.sendMail(email: String, type: String = "sign"): Any? 
  * 登录
  */
 suspend fun CoroutineScope.loginByEmail(email: String, password: String): BaseBean<String> {
-    return Post<BaseBean<String>>("index/login") {
+    return Post<BaseBean<String>>(ApiUrl.login) {
         param("email", email)
         param("password", password)
     }.await()
 }
 suspend fun CoroutineScope.checkMail(email: String, code: String,type:String="1"): BaseBean<Int> {
-    return Post<BaseBean<Int>>("index/checkMail") {
+    return Post<BaseBean<Int>>(ApiUrl.checkMail) {
         param("email", email)
         param("code", code)
         param("type", type)
     }.await()
 }
 suspend fun CoroutineScope.changeMail(email: String, code: String): BaseBean<Int> {
-    return Post<BaseBean<Int>>("index/change_email") {
+    return Post<BaseBean<Int>>(ApiUrl.changeEmail) {
         param("email", email)
         param("code", code)
 
     }.await()
 }
 suspend fun CoroutineScope.loginOff(): BaseBean<Int> {
-    return Post<BaseBean<Int>>("index/login_off") {
+    return Post<BaseBean<Int>>(ApiUrl.loginOff) {
 
     }.await()
 }
@@ -281,7 +281,7 @@ suspend fun CoroutineScope.loginOff(): BaseBean<Int> {
  * 登录
  */
 suspend fun CoroutineScope.getUserinfo(): BaseBean<UserData> {
-    return Post<BaseBean<UserData>>("index/userinfo") {
+    return Post<BaseBean<UserData>>(ApiUrl.userinfo) {
 
     }.await()
 }
@@ -290,21 +290,21 @@ suspend fun CoroutineScope.getUserinfo(): BaseBean<UserData> {
  * 登录
  */
 suspend fun CoroutineScope.forget(email: String, code: String, password: String): BaseBean<String> {
-    return Post<BaseBean<String>>("index/forget") {
+    return Post<BaseBean<String>>(ApiUrl.forget) {
         param("email", email)
         param("password", password)
         param("code", code)
     }.await()
 }
 suspend fun CoroutineScope.feedback(name:String,mobile: String, content: String,): BaseBean<Any> {
-    return Post<BaseBean<Any>>("index/feedback") {
+    return Post<BaseBean<Any>>(ApiUrl.feedback) {
         param("name", name)
         param("mobile", mobile)
         param("content", content)
     }.await()
 }
 suspend fun CoroutineScope.changePwd(password:String="",new_password:String="",step:String="1"): BaseBean<Any> {
-    return Post<BaseBean<Any>>("index/change_pwd") {
+    return Post<BaseBean<Any>>(ApiUrl.changePwd) {
         param("password", password)
 
         param("step", step)
@@ -326,7 +326,7 @@ suspend fun CoroutineScope.getCamera(
     street: String,
     route: String,
 ): BaseBean<List<CameraDeviceData>> {
-    return Post<BaseBean<List<CameraDeviceData>>>("index/devices") {
+    return Post<BaseBean<List<CameraDeviceData>>>(ApiUrl.devices) {
         param("long", long)
         param("lat", lat)
         param("direction", direction)
@@ -347,7 +347,7 @@ suspend fun CoroutineScope.getMapEvent(
     street: String,
     route: String,
 ): BaseBean<List<CameraDeviceData>> {
-    return Post<BaseBean<List<CameraDeviceData>>>("index/events") {
+    return Post<BaseBean<List<CameraDeviceData>>>(ApiUrl.events) {
         param("long", long)
         param("lat", lat)
         param("direction", direction)
@@ -361,7 +361,7 @@ suspend fun CoroutineScope.getMapEvent(
  * 账号密码登录
  */
 suspend fun CoroutineScope.loginMake(phone: String, password: String): BaseBean<UserBean> {
-    return Post<BaseBean<UserBean>>("login_make") {
+    return Post<BaseBean<UserBean>>(ApiUrl.loginMake) {
         param("phone", phone)
         param("password", password)
     }.await()
@@ -371,7 +371,7 @@ suspend fun CoroutineScope.loginMake(phone: String, password: String): BaseBean<
  * 三方登陆
  */
 suspend fun CoroutineScope.checkAuthorizations(unionid: String, type: String): ThreePartyLogin? {
-    return Post<BaseBean<ThreePartyLogin>>("check_authorizations") {
+    return Post<BaseBean<ThreePartyLogin>>(ApiUrl.checkAuthorizations) {
         param("unionid", unionid)
         param("type", type)
     }.await().data
@@ -381,7 +381,7 @@ suspend fun CoroutineScope.checkAuthorizations(unionid: String, type: String): T
  * 图形验证码
  */
 suspend fun CoroutineScope.sendImgCode(): ImageCodeBean? {
-    return Post<BaseBean<ImageCodeBean>>("send_img_code") {}.await().data
+    return Post<BaseBean<ImageCodeBean>>(ApiUrl.sendImgCode) {}.await().data
 }
 
 /**
@@ -389,7 +389,7 @@ suspend fun CoroutineScope.sendImgCode(): ImageCodeBean? {
  * @param type 1登录验证2绑定手机号3更换手机号验证身份4修改手机号5忘记密码
  */
 suspend fun CoroutineScope.sendCode(phone: String, type: Int): BaseBean<Object>? {
-    return Post<BaseBean<Object>>("send_code") {
+    return Post<BaseBean<Object>>(ApiUrl.sendCode) {
         param("phone", phone)
         param("type", type)
     }.await()
@@ -407,7 +407,7 @@ suspend fun CoroutineScope.forgetMake(
     password_confirmation: String,
 ): BaseBean<Object>? {
 
-    return Post<BaseBean<Object>>("forget_make") {
+    return Post<BaseBean<Object>>(ApiUrl.forgetMake) {
         param("phone", phone)
         param("img_code", img_code)
         param("client_id", client_id)
@@ -429,7 +429,7 @@ suspend fun CoroutineScope.oauthUserBind(
     type: String,
     nickname: String,
 ): BaseBean<UserBean> {
-    return Post<BaseBean<UserBean>>("oauth_user_bind") {
+    return Post<BaseBean<UserBean>>(ApiUrl.oauthUserBind) {
         param("phone", phone)
         param("img_code", img_code)
         param("client_id", client_id)
@@ -447,7 +447,7 @@ suspend fun CoroutineScope.getRoute(
     origin: String,
     destination: String,
 ): BaseBean<Any> {
-    return Get<BaseBean<Any>>("https://maps.googleapis.com/maps/api/directions/json") {
+    return Get<BaseBean<Any>>(ApiUrl.googleDirections) {
         param("origin", origin)
         param("destination", destination)
         param("mode", "driving")
@@ -462,7 +462,7 @@ suspend fun CoroutineScope.getRoute(
 suspend fun CoroutineScope.getPlaceById(
     place_id: String,
 ): BaseBean<List<PlaceData>> {
-    return Get<BaseBean<List<PlaceData>>>("https://maps.googleapis.com/maps/api/geocode/json") {
+    return Get<BaseBean<List<PlaceData>>>(ApiUrl.googleGeocode) {
         param("place_id", place_id)
         param("key", Tools.GoogleKey)
 
@@ -517,7 +517,7 @@ suspend fun CoroutineScope.downloadFile(
 suspend fun CoroutineScope.computeRoutes(
     entity: RoutesEntity,
 ): RoutesResult {
-    return Post<RoutesResult>("https://routes.googleapis.com/directions/v2:computeRoutes") {
+    return Post<RoutesResult>(ApiUrl.googleComputeRoutes) {
         addHeader("X-Goog-Api-Key", "AIzaSyCM7U1dQw4hMHK0iRJr2caNATHdMKboFrU")
         addHeader("X-Goog-FieldMask", "routes.distanceMeters,routes.duration,routes.polyline.encodedPolyline,routes.routeToken")
         body = CustomizerJSONBody(entity.toJson())
