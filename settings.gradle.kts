@@ -50,5 +50,5 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "SpeedProject"
-include(":app", ":Library:Base", ":Library:alipay", ":Library:bugly", ":Library:umeng", ":Library:widget", ":Library:permission", ":Library:imagepicker", ":Library:banner", ":indicatorseekbar",":blurview")
+include(":app", ":Library:Base", /*":Library:alipay", */":Library:bugly", /*":Library:umeng",*/ ":Library:widget", ":Library:permission", ":Library:imagepicker", ":Library:banner", ":indicatorseekbar",":blurview")
 include(":blecore")
