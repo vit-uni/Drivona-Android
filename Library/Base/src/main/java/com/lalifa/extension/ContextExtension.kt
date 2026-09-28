@@ -65,7 +65,7 @@ fun Context.screenSize(): DisplayMetrics {
 fun Context.packageInfo(): PackageInfo = packageManager.getPackageInfo(packageName, 0)
 
 //版本名
-fun Context.versionName(): String = packageInfo().versionName
+fun Context.versionName(): String = packageInfo().versionName ?: ""
 
 //版本号
 fun Context.versionCode(): Long = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {

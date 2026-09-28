@@ -39,7 +39,7 @@ class CircleProgressView : View {
         invalidate()
     }
 
-    override fun onDraw(canvas: Canvas?) {
+    override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
         if (progress <= 0) {
             paint.apply {
@@ -48,7 +48,7 @@ class CircleProgressView : View {
                 strokeWidth = arcWith.toFloat()
             }
             val bigRadio = measuredWidth.toFloat() / 2
-            canvas?.drawCircle(bigRadio, bigRadio, bigRadio - arcWith, paint)
+            canvas.drawCircle(bigRadio, bigRadio, bigRadio - arcWith, paint)
         } else {
             paint.apply {
                 style = Paint.Style.STROKE
@@ -58,7 +58,7 @@ class CircleProgressView : View {
                 alpha = 0x4D
             }
             val bigRadio = measuredWidth.toFloat() / 2
-            canvas?.drawCircle(bigRadio, bigRadio, bigRadio - arcWith, paint)
+            canvas.drawCircle(bigRadio, bigRadio, bigRadio - arcWith, paint)
             paint.apply {
                 color = progressColor
                 alpha = 0x255
@@ -67,13 +67,13 @@ class CircleProgressView : View {
                 arcWith.toFloat(), arcWith.toFloat(),
                 measuredWidth.toFloat() - arcWith, measuredWidth.toFloat() - arcWith
             )
-            canvas?.drawArc(rectF, 270f, progress * 360f / max, false, paint)
+            canvas.drawArc(rectF, 270f, progress * 360f / max, false, paint)
 
             paint.apply {
                 style = Paint.Style.FILL
                 strokeWidth = 0f
             }
-            canvas?.drawCircle(bigRadio, bigRadio, bigRadio - arcWith - 10.dp, paint)
+            canvas.drawCircle(bigRadio, bigRadio, bigRadio - arcWith - 10.dp, paint)
         }
     }
 }

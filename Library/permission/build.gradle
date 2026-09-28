@@ -5,7 +5,7 @@ plugins {
     id 'kotlin-kapt'
 }
 android {
-    compileSdkVersion 34
+    compileSdkVersion 36
     namespace "com.hjq.permissions"
 
     defaultConfig {

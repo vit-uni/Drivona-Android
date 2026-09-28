@@ -11,9 +11,9 @@ plugins {
 
 buildscript {
     dependencies {
-        classpath("com.android.tools.build:gradle:8.2.0")
+        classpath("com.android.tools.build:gradle:8.12.0")
 
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.21")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:2.1.0")
         classpath("com.github.dcendents:android-maven-gradle-plugin:2.1")
 //        classpath("com.mob.sdk:MobSDK:2018.0319.1724")
 //        classpath("com.google.gms:google-services:4.3.8")
@@ -29,10 +29,9 @@ buildscript {
 
 
 ext {
-    set("buildToolsVersion", "30.0.2")
-    set("compileSdk", 34)
+    set("compileSdk", 36)
     set("minSdk", 24)
-    set("targetSdk", 34)
+    set("targetSdk", 36)
     //动态配置
     set("versionCode", 102)
     set("versionName", "1.0.2")

@@ -7,7 +7,7 @@ plugins {
 
 android {
     namespace = "com.lalifa.base"
-    compileSdk 33
+    compileSdk 36
 
     defaultConfig {
         minSdkVersion rootProject.ext.minSdk

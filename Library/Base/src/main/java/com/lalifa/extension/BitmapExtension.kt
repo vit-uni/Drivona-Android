@@ -108,7 +108,7 @@ fun Bitmap?.saveImageToGallery(context: Context, file: File): Boolean {
         values.put(MediaStore.Images.ImageColumns.DATE_TAKEN, System.currentTimeMillis())
         val uri = resolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values)
         if (uri != null) {
-            val out = resolver.openOutputStream(uri)
+            val out = resolver.openOutputStream(uri) ?: return false
             compress(Bitmap.CompressFormat.PNG, 100, out)
             context.sendBroadcast(Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE, Uri.fromFile(file)))
             true

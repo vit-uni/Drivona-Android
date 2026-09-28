@@ -5,10 +5,10 @@ plugins {
 
 android {
     namespace "cn.com.heaton.blelibrary"
-    compileSdk 34
+    compileSdk 36
     defaultConfig {
         minSdk 18
-        targetSdk 33
+        targetSdk 36
         versionCode 331
         versionName "3.3.1"
 

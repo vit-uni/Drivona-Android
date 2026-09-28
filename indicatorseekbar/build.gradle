@@ -27,12 +27,11 @@ ext {
 }
 
 android {
-    compileSdkVersion 27
-    buildToolsVersion '27.0.3'
+    compileSdkVersion 36
     namespace "com.warkiz.widget"
     defaultConfig {
         minSdkVersion 14
-        targetSdkVersion 27
+        targetSdkVersion 36
         versionCode 3
         versionName VERSION_NAME
     }
@@ -45,7 +44,7 @@ android {
 }
 
 dependencies {
-    compileOnly 'com.android.support:appcompat-v7:27.1.1'
+    compileOnly 'androidx.annotation:annotation:1.9.1'
 }
 
 

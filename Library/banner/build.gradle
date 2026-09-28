@@ -7,12 +7,12 @@ apply plugin: 'kotlin-kapt'
 version = '2.2.2'
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion 36
     namespace "com.youth.banner"
 
     defaultConfig {
         minSdkVersion 14
-        targetSdkVersion 30
+        targetSdkVersion 36
         consumerProguardFiles 'proguard-rules.pro'
     }
 
