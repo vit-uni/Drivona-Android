@@ -41,7 +41,7 @@ abstract class BaseTitleActivity<T : ViewBinding>() : AppCompatActivity() {
      * 状态栏字体深色模式
      */
     protected open fun isStatusBarDarkFont(): Boolean {
-        return true
+        return false
     }
 
     /**
