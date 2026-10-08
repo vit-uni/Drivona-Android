@@ -5,10 +5,10 @@ package com.lalifa.ext
 class Tools {
     companion object{
 
-        const val BASE_URL = "https://online.vit-uni.com"
             // 正式环境
+//        const val BASE_URL = "https://online.vit-uni.com"
             // 测试环境
-//        const val BASE_URL = "https://app.vit-uni.com"
+        const val BASE_URL = "https://app.vit-uni.com"
         const val HOST = "${BASE_URL}/"
         const val FILE_PATH = "${BASE_URL}/"
         const val GoogleKey = "AIzaSyCM7U1dQw4hMHK0iRJr2caNATHdMKboFrU"
